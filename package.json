@@ -1,0 +1,19 @@
+{
+  "name": "DARSHANA-ethnic-couture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DARSHANA Ethnic Couture - Luxury Indian Sarees, Dupattas & Traditional Dress Pieces",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "start": "vite --host"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.2"
+  }
+}
