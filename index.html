@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Tailwind CSS -->
@@ -35,11 +35,22 @@
             serif: ['Cinzel', 'Georgia', 'serif'],
             cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
             sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            script: ['"Alex Brush"', '"Great Vibes"', 'cursive']
           }
         }
       }
     }
   </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
 
 <body
@@ -77,9 +88,9 @@
           <span>Collection</span>
           <span class="text-xs text-[#D4AF37] opacity-80">❖</span>
         </a>
-        <a href="#contact"
+        <a href="#ethnic-wear"
           class="drawer-link text-[#FDF2F4] hover:text-[#D4AF37] font-cormorant italic font-bold text-2xl tracking-widest transition-colors flex items-center justify-between py-1 border-b border-[#7A222C]/20">
-          <span>Order</span>
+          <span>Ethnic Wear</span>
           <span class="text-xs text-[#D4AF37] opacity-80">❖</span>
         </a>
         <a href="#contact"
@@ -117,14 +128,13 @@
       </button>
 
       <!-- Center Desktop Navigation (Desktop >=md Only) -->
-      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-12"
-        aria-label="Main Navigation">
+      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-12" aria-label="Main Navigation">
         <a href="#"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Home</a>
         <a href="#collection"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Collection</a>
-        <a href="#contact"
-          class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Order</a>
+        <a href="#ethnic-wear"
+          class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Ethnic Wear</a>
         <a href="#contact"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Contact</a>
       </nav>
@@ -144,76 +154,276 @@
 
     <!-- Center of the Page Content Block -->
     <div
-      class="relative z-20 w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center px-4 sm:px-6 pointer-events-auto select-none mt-4 sm:mt-6 md:mt-8">
+      class="relative z-20 w-full max-w-5xl mx-auto flex flex-col items-center justify-center text-center px-4 sm:px-6 pointer-events-auto select-none mt-3 sm:mt-6 md:mt-8">
 
-      <!-- Brand Signature Title (Shiv Ranjani (1).png) with Black Shadow on Small Screens -->
-      <img src="images/Shiv Ranjani (1).png" alt="Shiv Ranjani"
-        class="w-64 sm:w-80 md:w-[500px] lg:w-[600px] xl:w-[660px] h-auto object-contain select-none transition-transform duration-500 drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)] sm:drop-shadow-[0_6px_20px_rgba(0,0,0,0.9)] md:drop-shadow-none" />
+      <!-- Brand Signature Title (Shiv Ranjani.svg - Responsive scale for small and big screens) -->
+      <img src="images/Shiv Ranjani.svg" alt="Shiv Ranjani"
+        class="w-[300px] sm:w-[420px] md:w-[540px] lg:w-[600px] xl:w-[600px] h-auto object-contain select-none transition-transform duration-500" />
 
       <!-- Ornamental Divider (Group 7.svg) In Between Title & Text -->
       <img src="images/Group 7.svg" alt="Ornamental Divider"
-        class="w-32 sm:w-44 md:w-60 lg:w-68 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-10 mb-1.5 sm:mb-2 md:mb-2.5 h-auto object-contain select-none pointer-events-none opacity-90 z-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] md:drop-shadow-none" />
+        class="w-36 sm:w-48 md:w-64 lg:w-80 -mt-2 sm:-mt-4 md:-mt-8 lg:-mt-10 mb-2.5 sm:mb-3.5 md:mb-4 h-auto object-contain select-none pointer-events-none opacity-90 z-10" />
 
       <!-- Subtitle Text ("The Art of Draping") -->
       <p
-        class="text-[#7A1528] text-xs sm:text-sm md:text-lg lg:text-xl font-cormorant font-medium tracking-[0.2em] sm:tracking-[0.26em] md:tracking-[0.32em] mb-3 sm:mb-4 md:mb-5">
+        class="text-[#7A1528] text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl font-cormorant italic font-bold tracking-[0.2em] sm:tracking-[0.26em] md:tracking-[0.32em] lg:tracking-[0.36em] mb-4 sm:mb-6 md:mb-7">
         The Art of Draping
       </p>
 
       <!-- Luxury Outlined CTA Button with Flanking Decorative Sparks -->
-      <div class="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-        <span class="text-[#D4AF37] text-[10px] sm:text-xs md:text-sm select-none opacity-80">❖</span>
+      <div class="flex items-center justify-center gap-3 sm:gap-4 md:gap-5">
+        <span class="text-[#D4AF37] text-xs sm:text-sm md:text-base lg:text-lg select-none opacity-80">❖</span>
         <a href="#collection"
-          class="group inline-flex items-center gap-1.5 sm:gap-2 md:gap-2.5 border border-[#7A1528]/80 hover:border-[#7A1528] bg-white/20 hover:bg-[#7A1528] text-[#7A1528] hover:text-[#FDF2F4] px-4 sm:px-6 md:px-8 py-1.5 sm:py-2 md:py-2.5 rounded-full text-[9px] sm:text-[10px] md:text-[12px] uppercase tracking-[1.8px] sm:tracking-[2.2px] md:tracking-[2.8px] font-sans font-semibold transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 backdrop-blur-[2px]">
+          class="group inline-flex items-center gap-2 sm:gap-3 md:gap-3.5 border border-[#7A1528]/80 hover:border-[#7A1528] bg-white/25 hover:bg-[#7A1528] text-[#7A1528] hover:text-[#FDF2F4] px-5 sm:px-7 md:px-9 lg:px-9 py-2 sm:py-2.5 md:py-3 lg:py-1.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-[2px] sm:tracking-[2.6px] md:tracking-[3.2px] lg:tracking-[3.8px] font-sans font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 backdrop-blur-[2px]">
           <span>EXPLORE COLLECTION</span>
-          <span class="text-[10px] sm:text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+          <span
+            class="text-xs sm:text-sm md:text-base lg:text-lg transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
         </a>
-        <span class="text-[#D4AF37] text-[10px] sm:text-xs md:text-sm select-none opacity-80">❖</span>
+        <span class="text-[#D4AF37] text-xs sm:text-sm md:text-base lg:text-lg select-none opacity-80">❖</span>
       </div>
     </div>
   </main>
 
-  <!-- 2nd Page: Category Repeater (Single row across all screen sizes: grid-cols-5) -->
+  <!-- 2nd Page: Category Repeater (Exactly 3 cards visible on ALL screen sizes with swap buttons & swipe) -->
   <section id="collection"
-    class="relative w-full bg-[#ffffff] py-3 sm:py-6 md:py-8 px-1.5 sm:px-4 md:px-8 lg:px-10 overflow-hidden select-none">
+    class="relative w-full bg-[#ffffff] py-6 sm:py-10 md:py-14 px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden select-none">
     <div class="max-w-7xl mx-auto w-full relative z-10">
-      <div
-        class="grid grid-cols-5 gap-1.5 sm:gap-3 md:gap-4 lg:gap-5 w-full max-w-7xl mx-auto items-center justify-center">
-        <!-- Item 1 -->
-        <div
-          class="group relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(188,4,45,0.18)] border border-neutral-200/80 hover:border-[#BC042D]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          <img src="images/1.png" alt="Category 1" class="w-full h-auto block select-none" />
-        </div>
 
-        <!-- Item 2 -->
-        <div
-          class="group relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(188,4,45,0.18)] border border-neutral-200/80 hover:border-[#BC042D]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          <img src="images/2.png" alt="Category 2" class="w-full h-auto block select-none" />
-        </div>
+      <!-- Section Title: "Our Collection" flanked by Group 7.svg top & bottom -->
+      <div class="flex flex-col items-center justify-center text-center mb-6 sm:mb-8 md:mb-12">
+        <!-- Top Ornamental Divider -->
+        <img src="images/Group 7.svg" alt="Ornamental Divider Top"
+          class="w-28 sm:w-40 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-85 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
 
-        <!-- Item 3 -->
-        <div
-          class="group relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(188,4,45,0.18)] border border-neutral-200/80 hover:border-[#BC042D]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          <img src="images/3.png" alt="Category 3" class="w-full h-auto block select-none" />
-        </div>
+        <!-- Center Title -->
+        <h2
+          class="font-cormorant italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#7A1528] tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.16em] py-1 sm:py-2">
+          Our Collection
+        </h2>
 
-        <!-- Item 4 -->
-        <div
-          class="group relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(188,4,45,0.18)] border border-neutral-200/80 hover:border-[#BC042D]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          <img src="images/4.png" alt="Category 4" class="w-full h-auto block select-none" />
-        </div>
+        <!-- Bottom Ornamental Divider -->
+        <img src="images/Group 7.svg" alt="Ornamental Divider Bottom"
+          class="w-28 sm:w-40 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-85 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
+      </div>
 
-        <!-- Item 5 -->
-        <div
-          class="group relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(188,4,45,0.18)] border border-neutral-200/80 hover:border-[#BC042D]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          <img src="images/5.png" alt="Category 5" class="w-full h-auto block select-none" />
+      <!-- Carousel Container with Navigation Buttons Visible on ALL Screen Sizes -->
+      <div class="relative w-full">
+        <!-- Left Swap Button (All Screens) -->
+        <button id="carouselPrevBtn" aria-label="Previous Item"
+          class="absolute -left-3 sm:-left-5 md:-left-6 lg:-left-7 top-1/2 -translate-y-1/2 z-30 w-8 h-8 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <!-- Right Swap Button (All Screens) -->
+        <button id="carouselNextBtn" aria-label="Next Item"
+          class="absolute -right-3 sm:-right-5 md:-right-6 lg:-right-7 top-1/2 -translate-y-1/2 z-30 w-8 h-8 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- 5 Category Cards: 3 visible on small screens (<md), 4 visible on big screens (md+) with smooth swap -->
+        <div id="collectionCarousel"
+          class="flex gap-2 sm:gap-3 md:gap-3 lg:gap-4 xl:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory px-1 sm:px-2 py-3 sm:py-4 no-scrollbar w-full items-center cursor-grab active:cursor-grabbing">
+
+          <!-- Item 1 Button (Bandhani - Crimson Red) -->
+          <a href="#contact" aria-label="View Bandhani Collection" draggable="false"
+            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
+            <!-- Lotus Background Frame -->
+            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
+              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            <!-- Saree Image -->
+            <div
+              class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
+              <img src="images/1.png" alt="Bandhani Saree" draggable="false"
+                class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <!-- High Quality Script Label (Bandhani: Crimson Red) -->
+            <div
+              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-2 bottom-1.5 sm:bottom-2 md:bottom-0 z-20 pointer-events-none">
+              <span
+                class="font-script text-[#C00A35] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[29px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                Bandhani
+              </span>
+            </div>
+          </a>
+
+          <!-- Item 2 Button (Ajrakh - Warm Gold) -->
+          <a href="#contact" aria-label="View Ajrakh Collection" draggable="false"
+            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
+            <!-- Lotus Background Frame -->
+            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
+              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            <!-- Saree Image -->
+            <div
+              class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
+              <img src="images/2.png" alt="Ajrakh Saree" draggable="false"
+                class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <!-- High Quality Script Label (Ajrakh: Warm Gold) -->
+            <div
+              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-4 bottom-1.5 sm:bottom-2 md:bottom-0.9 z-20 pointer-events-none">
+              <span
+                class="font-script text-[#D8A82A] text-xl sm:text-2xl md:text-3xl lg:text-xl xl:text-[29px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                Ajrakh
+              </span>
+            </div>
+          </a>
+
+          <!-- Item 3 Button (No Text Label) -->
+          <a href="#contact" aria-label="View Collection Item 3" draggable="false"
+            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
+            <!-- Lotus Background Frame -->
+            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
+              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            <!-- Saree Image -->
+            <div
+              class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
+              <img src="images/3.png" alt="Heritage Saree 3" draggable="false"
+                class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+          </a>
+
+          <!-- Item 4 Button (No Text Label) -->
+          <a href="#contact" aria-label="View Collection Item 4" draggable="false"
+            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
+            <!-- Lotus Background Frame -->
+            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
+              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            <!-- Saree Image -->
+            <div
+              class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
+              <img src="images/4.png" alt="Heritage Saree 4" draggable="false"
+                class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+          </a>
+
+          <!-- Item 5 Button (Leriya - Dusty Rose Pink) -->
+          <a href="#contact" aria-label="View Leriya Collection" draggable="false"
+            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
+            <!-- Lotus Background Frame -->
+            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
+              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            <!-- Saree Image -->
+            <div
+              class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
+              <img src="images/5.png" alt="Leriya Saree" draggable="false"
+                class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <!-- High Quality Script Label (Leriya: Dusty Rose Pink) -->
+            <div
+              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-4 bottom-1.5 sm:bottom-2 md:bottom-0.5 z-20 pointer-events-none">
+              <span
+                class="font-script text-[#D27888] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                Leriya
+              </span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 3rd Page: Ethnic Wear Banner Section (Desktop: banner1.png with left-aligned text, Mobile: banner.png with top text & bottom button) -->
+  <section id="ethnic-wear" class="relative w-full overflow-hidden select-none bg-[#e8d5c4]">
+    <!-- Desktop Banner (md+) -->
+    <div class="hidden md:block relative w-full overflow-hidden">
+      <!-- Full-width Desktop Image (banner1.png) -->
+      <img src="images/banner1.png" alt="Shiv Ranjani - Ethnic Wear"
+        class="w-full h-auto block select-none pointer-events-none" />
+
+      <!-- Left-aligned Content Overlay matching reference image -->
+      <div
+        class="absolute inset-y-0 left-0 w-[55%] lg:w-[50%] flex items-center justify-center pl-6 sm:pl-10 md:pl-14 lg:pl-20 xl:pl-28">
+        <div class="flex flex-col items-center text-center max-w-md lg:max-w-lg xl:max-w-xl">
+          <!-- Subheading -->
+          <p
+            class="text-[#5B1824] font-serif text-xs md:text-sm lg:text-base xl:text-lg tracking-[0.38em] uppercase font-semibold mb-0.5 sm:mb-1">
+            SHIV RANJANI
+          </p>
+
+          <!-- Top Ornamental Divider (Group 7.svg) -->
+          <img src="images/Group 7.svg" alt="Divider"
+            class="w-20 md:w-28 lg:w-36 xl:w-44 h-auto object-contain select-none pointer-events-none opacity-85 my-0.5 sm:my-1 drop-shadow-[0_1px_2px_rgba(212,175,55,0.3)]" />
+
+          <!-- Main Title: ETHNIC WEAR -->
+          <h2
+            class="text-[#4A101B] font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.12em] uppercase font-normal my-0.5 sm:my-1">
+            ETHNIC WEAR
+          </h2>
+
+          <!-- Tagline: Tradition in every thread -->
+          <p
+            class="text-[#6E1828] font-cormorant italic text-lg md:text-2xl lg:text-3xl xl:text-4xl tracking-wide font-normal my-0.5 sm:my-1">
+            Tradition in every thread
+          </p>
+
+          <!-- Bottom Ornamental Divider (Group 7.svg) -->
+          <img src="images/Group 7.svg" alt="Divider"
+            class="w-20 md:w-28 lg:w-36 xl:w-44 h-auto object-contain select-none pointer-events-none opacity-85 my-0.5 sm:my-1 mb-3 sm:mb-5 drop-shadow-[0_1px_2px_rgba(212,175,55,0.3)]" />
+
+          <!-- Explore Collection Button -->
+          <a href="#collection"
+            class="group inline-flex items-center gap-2 sm:gap-3 border border-[#7A222C]/75 hover:border-[#7A222C] bg-white/20 hover:bg-[#7A222C] text-[#7A222C] hover:text-[#FDF2F4] px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3.5 rounded-full text-[11px] sm:text-xs lg:text-sm uppercase tracking-[0.22em] font-sans font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 backdrop-blur-[2px]">
+            <span>EXPLORE COLLECTION</span>
+            <span
+              class="text-xs lg:text-sm transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Banner (<md) -->
+    <div class="md:hidden relative w-full overflow-hidden">
+      <!-- Mobile Image (banner.png) -->
+      <img src="images/banner.png" alt="Shiv Ranjani - Ethnic Wear"
+        class="w-full h-auto block select-none pointer-events-none" />
+
+      <!-- Top Overlay: Text & Dividers at the Top of the Image -->
+      <div class="absolute top-4 sm:top-6 left-0 right-0 z-10 flex flex-col items-center text-center px-4">
+        <!-- Subheading -->
+        <p
+          class="text-[#5B1824] font-serif text-[11px] sm:text-xs tracking-[0.32em] uppercase font-semibold mb-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          SHIV RANJANI
+        </p>
+
+        <!-- Top Ornamental Divider (Group 7.svg) -->
+        <img src="images/Group 7.svg" alt="Divider"
+          class="w-20 sm:w-24 h-auto object-contain select-none pointer-events-none opacity-90 my-0.5 drop-shadow-sm" />
+
+        <!-- Main Title: ETHNIC WEAR -->
+        <h2
+          class="text-[#4A101B] font-serif text-2xl sm:text-3xl tracking-[0.12em] uppercase font-normal my-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          ETHNIC WEAR
+        </h2>
+
+        <!-- Tagline: Tradition in every thread -->
+        <p
+          class="text-[#6E1828] font-cormorant italic text-sm sm:text-base tracking-wide font-medium my-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          Tradition in every thread
+        </p>
+
+        <!-- Bottom Ornamental Divider (Group 7.svg) -->
+        <img src="images/Group 7.svg" alt="Divider"
+          class="w-20 sm:w-24 h-auto object-contain select-none pointer-events-none opacity-90 my-0.5 drop-shadow-sm" />
+      </div>
+
+      <!-- Bottom Overlay: Explore Collection Button at the Bottom of the Image -->
+      <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 z-10 flex justify-center px-4">
+        <a href="#collection"
+          class="group inline-flex items-center gap-2 border border-[#7A222C]/80 hover:border-[#7A222C] bg-white/60 hover:bg-[#7A222C] text-[#7A222C] hover:text-[#FDF2F4] px-6 sm:px-8 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.2em] font-sans font-bold transition-all duration-300 shadow-md backdrop-blur-sm">
+          <span>EXPLORE COLLECTION</span>
+          <span class="text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer: Frame 13.png Banner with Order Saree Text & Contact WhatsApp Numbers -->
-  <footer id="contact" class="relative w-full overflow-hidden select-none min-h-[110px] sm:min-h-[130px] md:min-h-0 flex items-center justify-center">
+  <footer id="contact"
+    class="relative w-full overflow-hidden select-none min-h-[110px] sm:min-h-[130px] md:min-h-0 flex items-center justify-center">
     <!-- Responsive Banner Image (Frame 13.png) -->
     <img src="images/Frame 13.png" alt="Order Your Saree Now"
       class="absolute inset-0 md:relative w-full h-full md:h-auto block object-cover md:object-contain select-none pointer-events-none" />
@@ -222,20 +432,21 @@
     <div class="absolute inset-0 bg-black/25 flex flex-col items-center justify-center text-center px-3 sm:px-4 py-2">
       <!-- Main Callout -->
       <h2
-        class="font-cormorant italic font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#FDF2F4] drop-shadow-[0_2px_10px_rgba(40,10,18,0.85)] tracking-wide mb-1 sm:mb-2">
+        class="font-cormorant italic font-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FDF2F4] drop-shadow-[0_2px_10px_rgba(40,10,18,0.85)] tracking-wide mb-1.5 sm:mb-3">
         Order your saree now
       </h2>
 
       <!-- Contact & WhatsApp Details -->
-      <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 md:gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3.5 md:gap-5">
         <span
-          class="font-cormorant text-[11px] sm:text-xs md:text-base text-[#FDF2F4] font-medium drop-shadow-md tracking-wider">
+          class="font-cormorant text-xs sm:text-sm md:text-lg lg:text-xl text-[#FDF2F4] font-medium drop-shadow-md tracking-wider">
           Contact & WhatsApp:
         </span>
         <!-- Number 1 -->
         <a href="https://wa.me/917567839034" target="_blank" rel="noopener noreferrer"
-          class="group inline-flex items-center gap-1 sm:gap-1.5 bg-black/40 hover:bg-[#25D366] text-[#FDF2F4] hover:text-white border border-[#D4AF37]/50 hover:border-[#25D366] px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider transition-all duration-300 shadow-md backdrop-blur-sm">
-          <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current text-[#25D366] group-hover:text-white transition-colors"
+          class="group inline-flex items-center gap-1.5 sm:gap-2 md:gap-2.5 bg-black/40 hover:bg-[#25D366] text-[#FDF2F4] hover:text-white border border-[#D4AF37]/50 hover:border-[#25D366] px-2.5 sm:px-4 md:px-5 lg:px-6 py-1 sm:py-1.5 md:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wider transition-all duration-300 shadow-md backdrop-blur-sm">
+          <svg
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 fill-current text-[#25D366] group-hover:text-white transition-colors"
             viewBox="0 0 24 24">
             <path
               d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
@@ -245,8 +456,9 @@
 
         <!-- Number 2 -->
         <a href="https://wa.me/919033777923" target="_blank" rel="noopener noreferrer"
-          class="group inline-flex items-center gap-1 sm:gap-1.5 bg-black/40 hover:bg-[#25D366] text-[#FDF2F4] hover:text-white border border-[#D4AF37]/50 hover:border-[#25D366] px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider transition-all duration-300 shadow-md backdrop-blur-sm">
-          <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current text-[#25D366] group-hover:text-white transition-colors"
+          class="group inline-flex items-center gap-1.5 sm:gap-2 md:gap-2.5 bg-black/40 hover:bg-[#25D366] text-[#FDF2F4] hover:text-white border border-[#D4AF37]/50 hover:border-[#25D366] px-2.5 sm:px-4 md:px-5 lg:px-6 py-1 sm:py-1.5 md:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wider transition-all duration-300 shadow-md backdrop-blur-sm">
+          <svg
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 fill-current text-[#25D366] group-hover:text-white transition-colors"
             viewBox="0 0 24 24">
             <path
               d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
@@ -300,6 +512,75 @@
     drawerLinks.forEach(link => {
       link.addEventListener('click', closeDrawer);
     });
+
+    // Collection Carousel Navigation for All Screens (Buttons + Drag/Touch Swipe)
+    const collectionCarousel = document.getElementById('collectionCarousel');
+    const carouselPrevBtn = document.getElementById('carouselPrevBtn');
+    const carouselNextBtn = document.getElementById('carouselNextBtn');
+
+    if (collectionCarousel) {
+      function getScrollStep() {
+        const firstCard = collectionCarousel.querySelector('a');
+        if (!firstCard) return 240;
+        const style = window.getComputedStyle(collectionCarousel);
+        const gap = parseFloat(style.columnGap || style.gap) || 16;
+        return firstCard.offsetWidth + gap;
+      }
+
+      if (carouselPrevBtn) {
+        carouselPrevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          collectionCarousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+        });
+      }
+
+      if (carouselNextBtn) {
+        carouselNextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          collectionCarousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+        });
+      }
+
+      // Mouse drag-to-swipe functionality for desktop & laptops
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let hasMoved = false;
+
+      collectionCarousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        hasMoved = false;
+        startX = e.pageX - collectionCarousel.offsetLeft;
+        scrollLeft = collectionCarousel.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDown) {
+          isDown = false;
+        }
+      });
+
+      collectionCarousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const x = e.pageX - collectionCarousel.offsetLeft;
+        const walk = (x - startX);
+        if (Math.abs(walk) > 4) {
+          hasMoved = true;
+          e.preventDefault();
+          collectionCarousel.scrollLeft = scrollLeft - walk;
+        }
+      });
+
+      // Prevent link clicks during drag gestures
+      collectionCarousel.querySelectorAll('a').forEach((cardLink) => {
+        cardLink.addEventListener('click', (e) => {
+          if (hasMoved) {
+            e.preventDefault();
+            hasMoved = false;
+          }
+        });
+      });
+    }
   </script>
 </body>
 
