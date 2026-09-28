@@ -1,3 +1,4 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -11,5 +12,14 @@ export default defineConfig({
   preview: {
     host: true,
     port: 1505,
+  },
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        notAvailable: resolve(__dirname, 'not-available.html'),
+      },
+    },
   },
 });

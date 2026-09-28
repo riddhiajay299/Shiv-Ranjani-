@@ -117,27 +117,49 @@
 
   <!-- Fixed Transparent Navbar -->
   <header id="siteHeader"
-    class="fixed top-0 left-0 right-0 z-50 bg-transparent py-3.5 sm:py-5 px-4 sm:px-6 md:px-10 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between md:justify-center relative">
-      <!-- Left Hamburger Menu Button (Small Screens <md Only) -->
-      <button id="menuToggleBtn" aria-label="Open Navigation Menu"
-        class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/40 hover:bg-white/70 backdrop-blur-md border border-[#BC042D]/20 text-[#BC042D] focus:outline-none transition-all shadow-sm cursor-pointer">
-        <span class="w-5 h-0.5 bg-[#BC042D] mb-1 transition-all duration-300"></span>
-        <span class="w-5 h-0.5 bg-[#BC042D] mb-1 transition-all duration-300"></span>
-        <span class="w-5 h-0.5 bg-[#BC042D] transition-all duration-300"></span>
-      </button>
+    class="fixed top-0 left-0 right-0 z-50 bg-transparent py-2.5 sm:py-3.5 px-4 sm:px-6 md:px-10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between relative">
+      <!-- Left: Mobile Menu Toggle (<md) & Desktop Logo (md+) -->
+      <div class="flex items-center">
+        <!-- Left Hamburger Menu Button (Small Screens <md Only) -->
+        <button id="menuToggleBtn" aria-label="Open Navigation Menu"
+          class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/40 hover:bg-white/70 backdrop-blur-md border border-[#BC042D]/20 text-[#BC042D] focus:outline-none transition-all shadow-sm cursor-pointer">
+          <span class="w-5 h-0.5 bg-[#BC042D] mb-1 transition-all duration-300"></span>
+          <span class="w-5 h-0.5 bg-[#BC042D] mb-1 transition-all duration-300"></span>
+          <span class="w-5 h-0.5 bg-[#BC042D] transition-all duration-300"></span>
+        </button>
 
-      <!-- Center Desktop Navigation (Desktop >=md Only) -->
-      <nav class="hidden md:flex items-center justify-center gap-8 lg:gap-12" aria-label="Main Navigation">
+        <!-- Desktop Logo on Left of Navbar (md+ Only) -->
+        <a href="#" class="hidden md:flex items-center gap-3 group select-none">
+          <img src="images/logo.png" alt="Shiv Ranjani Logo"
+            class="w-11 h-11 lg:w-13 lg:h-13 object-contain drop-shadow-[0_2px_8px_rgba(188,4,45,0.25)] transition-transform duration-300 group-hover:scale-105" />
+        </a>
+      </div>
+
+      <!-- Center Logo for Small Screens (<md Only) - Enlarged for Clear Prominence -->
+      <div
+        class="md:hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-auto select-none">
+        <a href="#" class="flex items-center justify-center">
+          <img src="images/logo.png" alt="Shiv Ranjani Logo"
+            class="w-14 h-14 sm:w-16 sm:h-16 object-contain drop-shadow-[0_2px_10px_rgba(188,4,45,0.3)] transition-transform duration-300 hover:scale-105" />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation Menu (md+ Only) -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Main Navigation">
         <a href="#"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Home</a>
         <a href="#collection"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Collection</a>
         <a href="#ethnic-wear"
-          class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Ethnic Wear</a>
+          class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Ethnic
+          Wear</a>
         <a href="#contact"
           class="text-[#BC042D] hover:text-[#7A021E] font-cormorant italic font-bold text-lg lg:text-xl tracking-widest transition-colors">Contact</a>
       </nav>
+
+      <!-- Right Spacer for Mobile to Keep Center Logo Perfectly Balanced -->
+      <div class="md:hidden w-10 pointer-events-none" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -184,33 +206,33 @@
     </div>
   </main>
 
-  <!-- 2nd Page: Category Repeater (Exactly 3 cards visible on ALL screen sizes with swap buttons & swipe) -->
+  <!-- 2nd Page: Category Repeater (Prominent visibility on all screens with text below images) -->
   <section id="collection"
-    class="relative w-full bg-[#ffffff] py-6 sm:py-10 md:py-14 px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden select-none">
+    class="relative w-full bg-[#ffffff] py-8 sm:py-12 md:py-16 px-3 sm:px-6 md:px-12 lg:px-16 overflow-hidden select-none">
     <div class="max-w-7xl mx-auto w-full relative z-10">
 
-      <!-- Section Title: "Our Collection" flanked by Group 7.svg top & bottom -->
-      <div class="flex flex-col items-center justify-center text-center mb-6 sm:mb-8 md:mb-12">
+      <!-- Section Title: "Our Collection" flanked by Group 7.svg top & bottom (Enlarged on mobile) -->
+      <div class="flex flex-col items-center justify-center text-center mb-6 sm:mb-9 md:mb-12">
         <!-- Top Ornamental Divider -->
         <img src="images/Group 7.svg" alt="Ornamental Divider Top"
-          class="w-28 sm:w-40 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-85 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
+          class="w-32 sm:w-44 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-90 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
 
         <!-- Center Title -->
         <h2
-          class="font-cormorant italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#7A1528] tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.16em] py-1 sm:py-2">
+          class="font-cormorant italic font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#7A1528] tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.16em] py-1 sm:py-2">
           Our Collection
         </h2>
 
         <!-- Bottom Ornamental Divider -->
         <img src="images/Group 7.svg" alt="Ornamental Divider Bottom"
-          class="w-28 sm:w-40 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-85 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
+          class="w-32 sm:w-44 md:w-60 lg:w-72 h-auto object-contain select-none pointer-events-none opacity-90 drop-shadow-[0_1px_3px_rgba(212,175,55,0.3)]" />
       </div>
 
       <!-- Carousel Container with Navigation Buttons Visible on ALL Screen Sizes -->
       <div class="relative w-full">
         <!-- Left Swap Button (All Screens) -->
         <button id="carouselPrevBtn" aria-label="Previous Item"
-          class="absolute -left-3 sm:-left-5 md:-left-6 lg:-left-7 top-1/2 -translate-y-1/2 z-30 w-8 h-8 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
+          class="absolute -left-2 sm:-left-4 md:-left-6 lg:-left-7 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
           <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
           </svg>
@@ -218,107 +240,146 @@
 
         <!-- Right Swap Button (All Screens) -->
         <button id="carouselNextBtn" aria-label="Next Item"
-          class="absolute -right-3 sm:-right-5 md:-right-6 lg:-right-7 top-1/2 -translate-y-1/2 z-30 w-8 h-8 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
+          class="absolute -right-2 sm:-right-4 md:-right-6 lg:-right-7 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full bg-white/95 hover:bg-[#7A1528] text-[#7A1528] hover:text-white border-2 border-[#BC042D]/40 hover:border-[#BC042D] shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(188,4,45,0.35)] flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer backdrop-blur-sm">
           <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
-        <!-- 5 Category Cards: 3 visible on small screens (<md), 4 visible on big screens (md+) with smooth swap -->
+        <!-- 5 Category Cards with flower.png Separators in Between -->
         <div id="collectionCarousel"
-          class="flex gap-2 sm:gap-3 md:gap-3 lg:gap-4 xl:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory px-1 sm:px-2 py-3 sm:py-4 no-scrollbar w-full items-center cursor-grab active:cursor-grabbing">
+          class="flex gap-1.5 sm:gap-2 md:gap-3 lg:gap-3.5 xl:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-1 sm:px-2 py-3 sm:py-5 no-scrollbar w-full items-stretch cursor-grab active:cursor-grabbing">
 
           <!-- Item 1 Button (Bandhani - Crimson Red) -->
           <a href="#contact" aria-label="View Bandhani Collection" draggable="false"
-            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
-            <!-- Lotus Background Frame -->
-            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
-              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            class="w-[calc((100%-48px)/2)] sm:w-[calc((100%-36px)/2)] md:w-[calc((100%-150px)/4)] lg:w-[calc((100%-180px)/4)] xl:w-[calc((100%-210px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-2.5 md:p-3.5 lg:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
             <!-- Saree Image -->
             <div
               class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
               <img src="images/1.png" alt="Bandhani Saree" draggable="false"
                 class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
             </div>
-            <!-- High Quality Script Label (Bandhani: Crimson Red) -->
+            <!-- Script Label & Full-Width Ornamental Border Exact Under Text -->
             <div
-              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-2 bottom-1.5 sm:bottom-2 md:bottom-0 z-20 pointer-events-none">
+              class="w-full flex flex-col items-center justify-center mt-1 sm:mt-1.5 relative z-20 pointer-events-none">
               <span
-                class="font-script text-[#C00A35] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[29px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                class="font-script text-[#C00A35] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
                 Bandhani
               </span>
+              <img src="images/border.png" alt="Ornamental Border" draggable="false"
+                class="w-full h-auto object-contain -mt-0.5 sm:-mt-1 select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
             </div>
           </a>
 
+          <!-- Flower Motif Separator 1-2 (Increased size for phone screens) -->
+          <div
+            class="flower-separator flex-shrink-0 flex items-center justify-center self-stretch select-none pointer-events-none w-10 sm:w-8 md:w-10 lg:w-12 xl:w-14 py-0.5 sm:py-1">
+            <img src="images/flower.png" alt="Lotus Ornament"
+              class="w-full h-full max-h-[380px] sm:max-h-[420px] md:max-h-[480px] lg:max-h-[540px] object-contain drop-shadow-[0_2px_8px_rgba(232,165,165,0.45)] opacity-95 transition-transform duration-300 scale-110 sm:scale-100" />
+          </div>
+
           <!-- Item 2 Button (Ajrakh - Warm Gold) -->
           <a href="#contact" aria-label="View Ajrakh Collection" draggable="false"
-            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
-            <!-- Lotus Background Frame -->
-            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
-              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+            class="w-[calc((100%-48px)/2)] sm:w-[calc((100%-36px)/2)] md:w-[calc((100%-150px)/4)] lg:w-[calc((100%-180px)/4)] xl:w-[calc((100%-210px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-2.5 md:p-3.5 lg:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
             <!-- Saree Image -->
             <div
               class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
               <img src="images/2.png" alt="Ajrakh Saree" draggable="false"
                 class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
             </div>
-            <!-- High Quality Script Label (Ajrakh: Warm Gold) -->
+            <!-- Script Label & Full-Width Ornamental Border Exact Under Text -->
             <div
-              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-4 bottom-1.5 sm:bottom-2 md:bottom-0.9 z-20 pointer-events-none">
+              class="w-full flex flex-col items-center justify-center mt-1 sm:mt-1.5 relative z-20 pointer-events-none">
               <span
-                class="font-script text-[#D8A82A] text-xl sm:text-2xl md:text-3xl lg:text-xl xl:text-[29px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                class="font-script text-[#D8A82A] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
                 Ajrakh
               </span>
+              <img src="images/border.png" alt="Ornamental Border" draggable="false"
+                class="w-full h-auto object-contain -mt-0.5 sm:-mt-1 select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
             </div>
           </a>
 
-          <!-- Item 3 Button (No Text Label) -->
-          <a href="#contact" aria-label="View Collection Item 3" draggable="false"
-            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
-            <!-- Lotus Background Frame -->
-            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
-              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+          <!-- Flower Motif Separator 2-3 (Increased size for phone screens) -->
+          <div
+            class="flower-separator flex-shrink-0 flex items-center justify-center self-stretch select-none pointer-events-none w-10 sm:w-8 md:w-10 lg:w-12 xl:w-14 py-0.5 sm:py-1">
+            <img src="images/flower.png" alt="Lotus Ornament"
+              class="w-full h-full max-h-[380px] sm:max-h-[420px] md:max-h-[480px] lg:max-h-[540px] object-contain drop-shadow-[0_2px_8px_rgba(232,165,165,0.45)] opacity-95 transition-transform duration-300 scale-110 sm:scale-100" />
+          </div>
+
+          <!-- Item 3 Button (Lagadi Patta - Deep Royal Purple) -->
+          <a href="#contact" aria-label="View Lagadi Patta Collection" draggable="false"
+            class="w-[calc((100%-48px)/2)] sm:w-[calc((100%-36px)/2)] md:w-[calc((100%-150px)/4)] lg:w-[calc((100%-180px)/4)] xl:w-[calc((100%-210px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-2.5 md:p-3.5 lg:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
             <!-- Saree Image -->
             <div
               class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
-              <img src="images/3.png" alt="Heritage Saree 3" draggable="false"
+              <img src="images/3.png" alt="Lagadi Patta Saree" draggable="false"
                 class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <!-- Script Label & Full-Width Ornamental Border Exact Under Text -->
+            <div
+              class="w-full flex flex-col items-center justify-center mt-1 sm:mt-1.5 relative z-20 pointer-events-none">
+              <span
+                class="font-script text-[#6B1774] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                Lagadi patta
+              </span>
+              <img src="images/border.png" alt="Ornamental Border" draggable="false"
+                class="w-full h-auto object-contain -mt-0.5 sm:-mt-1 select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
             </div>
           </a>
 
-          <!-- Item 4 Button (No Text Label) -->
-          <a href="#contact" aria-label="View Collection Item 4" draggable="false"
-            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
-            <!-- Lotus Background Frame -->
-            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
-              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+          <!-- Flower Motif Separator 3-4 (Increased size for phone screens) -->
+          <div
+            class="flower-separator flex-shrink-0 flex items-center justify-center self-stretch select-none pointer-events-none w-10 sm:w-8 md:w-10 lg:w-12 xl:w-14 py-0.5 sm:py-1">
+            <img src="images/flower.png" alt="Lotus Ornament"
+              class="w-full h-full max-h-[380px] sm:max-h-[420px] md:max-h-[480px] lg:max-h-[540px] object-contain drop-shadow-[0_2px_8px_rgba(232,165,165,0.45)] opacity-95 transition-transform duration-300 scale-110 sm:scale-100" />
+          </div>
+
+          <!-- Item 4 Button (Dupata - Deep Wine Plum) -->
+          <a href="#contact" aria-label="View Dupata Collection" draggable="false"
+            class="w-[calc((100%-48px)/2)] sm:w-[calc((100%-36px)/2)] md:w-[calc((100%-150px)/4)] lg:w-[calc((100%-180px)/4)] xl:w-[calc((100%-210px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-2.5 md:p-3.5 lg:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
             <!-- Saree Image -->
             <div
               class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
-              <img src="images/4.png" alt="Heritage Saree 4" draggable="false"
+              <img src="images/4.png" alt="Dupata" draggable="false"
                 class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <!-- Script Label & Full-Width Ornamental Border Exact Under Text -->
+            <div
+              class="w-full flex flex-col items-center justify-center mt-1 sm:mt-1.5 relative z-20 pointer-events-none">
+              <span
+                class="font-script text-[#5C1428] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
+                Dupata
+              </span>
+              <img src="images/border.png" alt="Ornamental Border" draggable="false"
+                class="w-full h-auto object-contain -mt-0.5 sm:-mt-1 select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
             </div>
           </a>
 
-          <!-- Item 5 Button (Leriya - Dusty Rose Pink) -->
-          <a href="#contact" aria-label="View Leriya Collection" draggable="false"
-            class="w-[calc((100%-16px)/3)] sm:w-[calc((100%-24px)/3)] md:w-[calc((100%-36px)/4)] lg:w-[calc((100%-48px)/4)] xl:w-[calc((100%-60px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-1.5 sm:p-2 md:p-3 lg:p-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white block focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
-            <!-- Lotus Background Frame -->
-            <img src="images/Lotus.png" alt="Lotus Motif Frame" draggable="false"
-              class="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none opacity-95 group-hover:scale-105 transition-transform duration-500" />
+          <!-- Flower Motif Separator 4-5 (Increased size for phone screens) -->
+          <div
+            class="flower-separator flex-shrink-0 flex items-center justify-center self-stretch select-none pointer-events-none w-10 sm:w-8 md:w-10 lg:w-12 xl:w-14 py-0.5 sm:py-1">
+            <img src="images/flower.png" alt="Lotus Ornament"
+              class="w-full h-full max-h-[380px] sm:max-h-[420px] md:max-h-[480px] lg:max-h-[540px] object-contain drop-shadow-[0_2px_8px_rgba(232,165,165,0.45)] opacity-95 transition-transform duration-300 scale-110 sm:scale-100" />
+          </div>
+
+          <!-- Item 5 Button (Lehariya - Dusty Rose Pink) -->
+          <a href="#contact" aria-label="View Lehariya Collection" draggable="false"
+            class="w-[calc((100%-48px)/2)] sm:w-[calc((100%-36px)/2)] md:w-[calc((100%-150px)/4)] lg:w-[calc((100%-180px)/4)] xl:w-[calc((100%-210px)/4)] flex-shrink-0 snap-start group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-2.5 md:p-3.5 lg:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] border-2 border-[#E8A5A5] hover:border-[#BC042D] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer bg-white flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[#BC042D]/50 select-none">
             <!-- Saree Image -->
             <div
               class="relative z-10 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2]">
-              <img src="images/5.png" alt="Leriya Saree" draggable="false"
+              <img src="images/5.png" alt="Lehariya Saree" draggable="false"
                 class="w-full h-auto block select-none transition-transform duration-500 group-hover:scale-[1.03]" />
             </div>
-            <!-- High Quality Script Label (Leriya: Dusty Rose Pink) -->
+            <!-- Script Label & Full-Width Ornamental Border Exact Under Text -->
             <div
-              class="absolute left-2 sm:left-3 md:left-3.5 lg:left-4 bottom-1.5 sm:bottom-2 md:bottom-0.5 z-20 pointer-events-none">
+              class="w-full flex flex-col items-center justify-center mt-1 sm:mt-1.5 relative z-20 pointer-events-none">
               <span
                 class="font-script text-[#D27888] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[38px] font-normal leading-none block select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition-transform duration-300 group-hover:scale-105">
-                Leriya
+                Lehariya
               </span>
+              <img src="images/border.png" alt="Ornamental Border" draggable="false"
+                class="w-full h-auto object-contain -mt-0.5 sm:-mt-1 select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
             </div>
           </a>
         </div>
@@ -326,96 +387,145 @@
     </div>
   </section>
 
-  <!-- 3rd Page: Ethnic Wear Banner Section (Desktop: banner1.png with left-aligned text, Mobile: banner.png with top text & bottom button) -->
+  <!-- 3rd Page: Ethnic Wear Banner Section (Desktop & Mobile matching reference text style on the left) -->
   <section id="ethnic-wear" class="relative w-full overflow-hidden select-none bg-[#e8d5c4]">
     <!-- Desktop Banner (md+) -->
     <div class="hidden md:block relative w-full overflow-hidden">
       <!-- Full-width Desktop Image (banner1.png) -->
-      <img src="images/banner1.png" alt="Shiv Ranjani - Ethnic Wear"
-        class="w-full h-auto block select-none pointer-events-none" />
+      <img src="images/banner1.png" alt="Ethnic Wear" class="w-full h-auto block select-none pointer-events-none" />
 
-      <!-- Left-aligned Content Overlay matching reference image -->
+      <!-- Left-aligned Content Overlay -->
       <div
-        class="absolute inset-y-0 left-0 w-[55%] lg:w-[50%] flex items-center justify-center pl-6 sm:pl-10 md:pl-14 lg:pl-20 xl:pl-28">
-        <div class="flex flex-col items-center text-center max-w-md lg:max-w-lg xl:max-w-xl">
-          <!-- Subheading -->
-          <p
-            class="text-[#5B1824] font-serif text-xs md:text-sm lg:text-base xl:text-lg tracking-[0.38em] uppercase font-semibold mb-0.5 sm:mb-1">
-            SHIV RANJANI
+        class="absolute inset-y-0 left-0 w-[52%] lg:w-[48%] flex items-center justify-center pl-6 md:pl-12 lg:pl-16 xl:pl-20">
+        <div class="flex flex-col items-center text-center max-w-md lg:max-w-lg xl:max-w-xl select-none">
+          <!-- Top Label: ETHNIC WEAR -->
+          <p class="text-[#9E4D58] font-cormorant font-medium text-sm lg:text-base tracking-[0.3em] uppercase mb-1 drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]">
+            ETHNIC WEAR
           </p>
 
-          <!-- Top Ornamental Divider (Group 7.svg) -->
-          <img src="images/Group 7.svg" alt="Divider"
-            class="w-20 md:w-28 lg:w-36 xl:w-44 h-auto object-contain select-none pointer-events-none opacity-85 my-0.5 sm:my-1 drop-shadow-[0_1px_2px_rgba(212,175,55,0.3)]" />
+          <!-- Lotus Line Divider -->
+          <div class="flex items-center justify-center my-1.5 sm:my-2 w-32 sm:w-44">
+            <div class="h-[1px] bg-[#B05D68]/70 flex-1"></div>
+            <svg class="w-5 h-4 mx-2 text-[#B05D68] fill-none stroke-current" viewBox="0 0 28 18" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2 C12 6 12 11 14 15 C16 11 16 6 14 2 Z" fill="#B05D68" fill-opacity="0.15" />
+              <path d="M14 15 C10 12 8 8 10 4 C12 7 13 11 14 15 Z" />
+              <path d="M14 15 C18 12 20 8 18 4 C16 7 15 11 14 15 Z" />
+              <path d="M14 15 C8 13 4 11 3 8 C6 9 10 11 14 15 Z" />
+              <path d="M14 15 C20 13 24 11 25 8 C22 9 18 11 14 15 Z" />
+              <path d="M10 16 C12 17 16 17 18 16" />
+            </svg>
+            <div class="h-[1px] bg-[#B05D68]/70 flex-1"></div>
+          </div>
 
-          <!-- Main Title: ETHNIC WEAR -->
+          <!-- Main Title: Tradition -->
           <h2
-            class="text-[#4A101B] font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.12em] uppercase font-normal my-0.5 sm:my-1">
-            ETHNIC WEAR
+            class="text-[#4A0E17] font-cormorant font-normal text-6xl md:text-7xl lg:text-8xl xl:text-[92px] tracking-tight leading-[0.88] drop-shadow-[0_2px_8px_rgba(255,255,255,0.4)]">
+            Tradition
           </h2>
 
-          <!-- Tagline: Tradition in every thread -->
+          <!-- Subtitle: in every thread -->
           <p
-            class="text-[#6E1828] font-cormorant italic text-lg md:text-2xl lg:text-3xl xl:text-4xl tracking-wide font-normal my-0.5 sm:my-1">
-            Tradition in every thread
+            class="text-[#B05D68] font-cormorant italic font-normal text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight -mt-1 sm:-mt-2 drop-shadow-[0_1px_4px_rgba(255,255,255,0.4)]">
+            in every thread
           </p>
 
-          <!-- Bottom Ornamental Divider (Group 7.svg) -->
-          <img src="images/Group 7.svg" alt="Divider"
-            class="w-20 md:w-28 lg:w-36 xl:w-44 h-auto object-contain select-none pointer-events-none opacity-85 my-0.5 sm:my-1 mb-3 sm:mb-5 drop-shadow-[0_1px_2px_rgba(212,175,55,0.3)]" />
+          <!-- Ornamental Center Diamond -->
+          <div class="w-1.5 h-1.5 rotate-45 bg-[#B05D68] my-2 sm:my-3"></div>
+
+          <!-- All-caps Tagline: TIMELESS STYLES FOR YOUR EVERYDAY STORIES -->
+          <p
+            class="text-[#B05D68] font-sans font-medium text-[10px] sm:text-xs md:text-xs lg:text-[13px] tracking-[0.24em] md:tracking-[0.28em] uppercase mb-4 sm:mb-6">
+            TIMELESS STYLES FOR YOUR EVERYDAY STORIES
+          </p>
 
           <!-- Explore Collection Button -->
-          <a href="#collection"
-            class="group inline-flex items-center gap-2 sm:gap-3 border border-[#7A222C]/75 hover:border-[#7A222C] bg-white/20 hover:bg-[#7A222C] text-[#7A222C] hover:text-[#FDF2F4] px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3.5 rounded-full text-[11px] sm:text-xs lg:text-sm uppercase tracking-[0.22em] font-sans font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 backdrop-blur-[2px]">
+          <a href="not-available.html"
+            class="group inline-flex items-center gap-2 sm:gap-2.5 border border-[#B05D68]/80 hover:border-[#4A0E17] bg-[#E6CBC1]/85 hover:bg-[#4A0E17] text-[#4A0E17] hover:text-[#FDF2F4] px-7 sm:px-9 lg:px-11 py-2.5 sm:py-3 rounded-full text-xs sm:text-xs lg:text-sm uppercase tracking-[0.24em] font-sans font-semibold transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 backdrop-blur-xs">
             <span>EXPLORE COLLECTION</span>
-            <span
-              class="text-xs lg:text-sm transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+            <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Banner (<md) -->
-    <div class="md:hidden relative w-full overflow-hidden">
-      <!-- Mobile Image (banner.png) -->
-      <img src="images/banner.png" alt="Shiv Ranjani - Ethnic Wear"
-        class="w-full h-auto block select-none pointer-events-none" />
+    <!-- Mobile Banner (<md) - Center-aligned text overlay on left side matching reference image -->
+    <div class="md:hidden relative w-full overflow-hidden min-h-[440px] sm:min-h-[500px]">
+      <!-- Mobile Image (banner.png with focus on model on right) -->
+      <img src="images/banner.png" alt="Ethnic Wear"
+        class="w-full h-full min-h-[440px] sm:min-h-[500px] object-cover object-[75%_center] block select-none pointer-events-none" />
 
-      <!-- Top Overlay: Text & Dividers at the Top of the Image -->
-      <div class="absolute top-4 sm:top-6 left-0 right-0 z-10 flex flex-col items-center text-center px-4">
-        <!-- Subheading -->
-        <p
-          class="text-[#5B1824] font-serif text-[11px] sm:text-xs tracking-[0.32em] uppercase font-semibold mb-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-          SHIV RANJANI
-        </p>
+      <!-- Left-side Content Overlay for Mobile -->
+      <div class="absolute inset-y-0 left-0 w-[58%] sm:w-[54%] flex items-center justify-center pl-3 sm:pl-6 pr-1 z-10">
+        <div class="flex flex-col items-center text-center max-w-[270px] sm:max-w-[310px] select-none">
+          <!-- Top Label: ETHNIC WEAR -->
+          <p class="text-[#9E4D58] font-cormorant font-medium text-[11px] sm:text-xs tracking-[0.28em] uppercase mb-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+            ETHNIC WEAR
+          </p>
 
-        <!-- Top Ornamental Divider (Group 7.svg) -->
-        <img src="images/Group 7.svg" alt="Divider"
-          class="w-20 sm:w-24 h-auto object-contain select-none pointer-events-none opacity-90 my-0.5 drop-shadow-sm" />
+          <!-- Lotus Line Divider -->
+          <div class="flex items-center justify-center my-1 sm:my-1.5 w-24 sm:w-32">
+            <div class="h-[1px] bg-[#B05D68]/70 flex-1"></div>
+            <svg class="w-4 h-3 mx-1 text-[#B05D68] fill-none stroke-current flex-shrink-0" viewBox="0 0 28 18" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2 C12 6 12 11 14 15 C16 11 16 6 14 2 Z" fill="#B05D68" fill-opacity="0.15" />
+              <path d="M14 15 C10 12 8 8 10 4 C12 7 13 11 14 15 Z" />
+              <path d="M14 15 C18 12 20 8 18 4 C16 7 15 11 14 15 Z" />
+              <path d="M14 15 C8 13 4 11 3 8 C6 9 10 11 14 15 Z" />
+              <path d="M14 15 C20 13 24 11 25 8 C22 9 18 11 14 15 Z" />
+              <path d="M10 16 C12 17 16 17 18 16" />
+            </svg>
+            <div class="h-[1px] bg-[#B05D68]/70 flex-1"></div>
+          </div>
 
-        <!-- Main Title: ETHNIC WEAR -->
-        <h2
-          class="text-[#4A101B] font-serif text-2xl sm:text-3xl tracking-[0.12em] uppercase font-normal my-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-          ETHNIC WEAR
-        </h2>
+          <!-- Main Title: Tradition -->
+          <h2
+            class="text-[#4A0E17] font-cormorant font-normal text-[38px] sm:text-[46px] tracking-tight leading-[0.88] drop-shadow-[0_2px_6px_rgba(255,255,255,0.7)]">
+            Tradition
+          </h2>
 
-        <!-- Tagline: Tradition in every thread -->
-        <p
-          class="text-[#6E1828] font-cormorant italic text-sm sm:text-base tracking-wide font-medium my-0.5 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-          Tradition in every thread
-        </p>
+          <!-- Subtitle: in every thread -->
+          <p
+            class="text-[#B05D68] font-cormorant italic font-normal text-[22px] sm:text-[28px] leading-tight -mt-0.5 sm:-mt-1 drop-shadow-[0_1px_3px_rgba(255,255,255,0.7)]">
+            in every thread
+          </p>
 
-        <!-- Bottom Ornamental Divider (Group 7.svg) -->
-        <img src="images/Group 7.svg" alt="Divider"
-          class="w-20 sm:w-24 h-auto object-contain select-none pointer-events-none opacity-90 my-0.5 drop-shadow-sm" />
+          <!-- Ornamental Center Diamond -->
+          <div class="w-1.5 h-1.5 rotate-45 bg-[#B05D68] my-1.5 sm:my-2"></div>
+
+          <!-- All-caps Tagline: TIMELESS STYLES FOR YOUR EVERYDAY STORIES -->
+          <p
+            class="text-[#B05D68] font-sans font-medium text-[7.5px] sm:text-[9.5px] tracking-[0.18em] sm:tracking-[0.2em] uppercase leading-tight mb-3 sm:mb-4 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+            TIMELESS STYLES FOR YOUR EVERYDAY STORIES
+          </p>
+
+          <!-- Explore Collection Button -->
+          <a href="not-available.html"
+            class="group inline-flex items-center gap-1.5 border border-[#B05D68]/80 hover:border-[#4A0E17] bg-[#E6CBC1]/85 hover:bg-[#4A0E17] text-[#4A0E17] hover:text-[#FDF2F4] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-[9.5px] sm:text-xs uppercase tracking-[0.18em] font-sans font-semibold transition-all duration-300 shadow-sm active:scale-95 backdrop-blur-xs">
+            <span>EXPLORE COLLECTION</span>
+            <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+          </a>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Bottom Overlay: Explore Collection Button at the Bottom of the Image -->
-      <div class="absolute bottom-4 sm:bottom-6 left-0 right-0 z-10 flex justify-center px-4">
-        <a href="#collection"
-          class="group inline-flex items-center gap-2 border border-[#7A222C]/80 hover:border-[#7A222C] bg-white/60 hover:bg-[#7A222C] text-[#7A222C] hover:text-[#FDF2F4] px-6 sm:px-8 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.2em] font-sans font-bold transition-all duration-300 shadow-md backdrop-blur-sm">
-          <span>EXPLORE COLLECTION</span>
-          <span class="text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+  <!-- 4th Page: Call To Action Box (White Background with Order Saree Box) -->
+  <section id="order-cta"
+    class="relative w-full bg-[#ffffff] py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden select-none">
+    <div class="max-w-4xl mx-auto w-full relative z-10">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-5 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-[#FFF5F6] border-2 border-[#E8A5A5]/80 shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-center sm:text-left">
+          <h3 class="font-cormorant italic font-bold text-2xl sm:text-3xl md:text-4xl text-[#7A1528]">
+            Experience Timeless Elegance
+          </h3>
+          <p class="text-xs sm:text-sm md:text-base text-[#8E4450] mt-1.5 font-sans">
+            Connect with our styling artisans directly on WhatsApp for custom orders & worldwide shipping
+          </p>
+        </div>
+        <a href="#contact"
+          class="group inline-flex items-center gap-2 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] px-7 sm:px-9 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-[0.2em] font-sans font-bold transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 flex-shrink-0">
+          <span>ORDER YOUR SAREE</span>
+          <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
     </div>
@@ -523,8 +633,10 @@
         const firstCard = collectionCarousel.querySelector('a');
         if (!firstCard) return 240;
         const style = window.getComputedStyle(collectionCarousel);
-        const gap = parseFloat(style.columnGap || style.gap) || 16;
-        return firstCard.offsetWidth + gap;
+        const gap = parseFloat(style.columnGap || style.gap) || 12;
+        const flower = collectionCarousel.querySelector('.flower-separator');
+        const flowerWidth = flower ? flower.offsetWidth + gap : 0;
+        return firstCard.offsetWidth + gap + flowerWidth;
       }
 
       if (carouselPrevBtn) {
