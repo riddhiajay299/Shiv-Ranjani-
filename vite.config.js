@@ -19,6 +19,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         notAvailable: resolve(__dirname, 'not-available.html'),
+        ajrakh: resolve(__dirname, 'ajrakh.html'),
       },
     },
   },
