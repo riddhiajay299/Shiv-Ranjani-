@@ -20,6 +20,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         notAvailable: resolve(__dirname, 'not-available.html'),
         ajrakh: resolve(__dirname, 'ajrakh.html'),
+        bandhani: resolve(__dirname, 'bandhani.html'),
       },
     },
   },
