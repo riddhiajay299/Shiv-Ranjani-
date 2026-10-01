@@ -1,8 +1,27 @@
+import fs from 'fs';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
+function copyImagesPlugin() {
+  return {
+    name: 'copy-images-plugin',
+    closeBundle() {
+      const src = resolve(__dirname, 'images');
+      const dest = resolve(__dirname, 'dist/images');
+      if (fs.existsSync(src)) {
+        fs.cpSync(src, dest, { recursive: true });
+        console.log('✓ Successfully copied images directory to dist/images');
+      }
+    }
+  };
+}
+
 export default defineConfig({
   base: '/Shiv-Ranjani-/',
+
+  plugins: [
+    copyImagesPlugin()
+  ],
 
   server: {
     host: true,
