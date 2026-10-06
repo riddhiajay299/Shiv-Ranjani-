@@ -43,6 +43,7 @@ export default defineConfig({
         lagadiPatta: resolve(__dirname, 'lagadi-patta.html'),
         lehariya: resolve(__dirname, 'lehariya.html'),
         dupata: resolve(__dirname, 'dupata.html'),
+        products: resolve(__dirname, 'products.html'),
       },
     },
   },
