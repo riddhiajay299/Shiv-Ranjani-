@@ -593,7 +593,7 @@
   </main>
 
   <!-- Interactive Modal for High-Res Image & Complete Product Details (Full image on small screens with scrollable details; Side-by-side on big screens) -->
-  <div id="detailsModal"
+  <div id="detailsModal" style="pointer-events: none; visibility: hidden;"
     class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-start md:items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto">
 
     <div
@@ -637,20 +637,9 @@
 
           <!-- Product Title -->
           <h3 id="modalProductTitle"
-            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] leading-tight mb-1">
+            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] leading-tight mb-2.5 pb-2 border-b border-[#7A1528]/15">
             Product Title
           </h3>
-
-          <!-- Price Row -->
-          <div class="flex items-baseline gap-2.5 mb-2.5 pb-2 border-b border-[#7A1528]/15">
-            <span id="modalProductPrice" class="font-sans font-bold text-lg sm:text-2xl text-[#7A1528]">₹16,499</span>
-            <span id="modalProductOriginalPrice"
-              class="font-sans text-xs sm:text-sm text-[#8E4450]/60 line-through">₹21,999</span>
-            <span
-              class="text-[10px] sm:text-[11px] font-sans font-semibold text-[#137333] bg-[#e6f4ea] px-2 py-0.5 rounded-full border border-[#137333]/20">
-              Free Shipping
-            </span>
-          </div>
 
           <!-- Available Colours Showcase -->
           <div class="mb-3">
@@ -1026,9 +1015,9 @@
       }
 
       // Update WhatsApp Order Button text & link
-      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) priced at ${currentProduct.price}.`;
+      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}).`;
       if (index > 0 && color.name !== 'Close-up') {
-        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour priced at ${currentProduct.price}.`;
+        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour.`;
       }
       const orderMsg = encodeURIComponent(orderMsgText);
       document.getElementById('modalWhatsAppOrderBtn').href = `https://wa.me/917567839034?text=${orderMsg}`;
@@ -1050,8 +1039,6 @@
 
       document.getElementById('modalCodeBadge').textContent = 'Code: ' + p.code;
       document.getElementById('modalProductTitle').textContent = p.title;
-      document.getElementById('modalProductPrice').textContent = p.price;
-      document.getElementById('modalProductOriginalPrice').textContent = p.originalPrice;
 
       // Render Available Colours Container
       const colorsContainer = document.getElementById('modalColorsContainer');
@@ -1081,16 +1068,22 @@
       // Auto-select Close-up option from the start itself
       selectModalColor(selectedColorIndex);
 
+      detailsModal.style.visibility = 'visible';
+      detailsModal.style.pointerEvents = 'auto';
       detailsModal.classList.remove('opacity-0', 'pointer-events-none');
-      detailsModal.classList.add('opacity-100', 'pointer-events-auto');
+      detailsModal.classList.add('opacity-100', 'pointer-events-auto', 'modal-active');
       modalContent.classList.remove('scale-95');
       modalContent.classList.add('scale-100');
       document.body.classList.add('overflow-hidden');
     }
 
     function closeProductDetails() {
+      detailsModal.style.pointerEvents = 'none';
+      detailsModal.classList.remove('opacity-100', 'pointer-events-auto', 'modal-active');
       detailsModal.classList.add('opacity-0', 'pointer-events-none');
-      detailsModal.classList.remove('opacity-100', 'pointer-events-auto');
+      setTimeout(() => {
+        if (!detailsModal.classList.contains('modal-active')) detailsModal.style.visibility = 'hidden';
+      }, 300);
       modalContent.classList.add('scale-95');
       modalContent.classList.remove('scale-100');
       document.body.classList.remove('overflow-hidden');
@@ -1106,6 +1099,10 @@
       if (e.key === 'Escape') {
         closeProductDetails();
       }
+    });
+
+    window.addEventListener('pageshow', () => {
+      if (typeof closeProductDetails === 'function') closeProductDetails();
     });
   </script>
 

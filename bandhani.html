@@ -54,6 +54,26 @@
     .aspect-3-4 {
       aspect-ratio: 3 / 4;
     }
+
+    /* Custom Luxury Scrollbar for Modal Colours */
+    #modalColorsContainer {
+      scrollbar-width: thin;
+      scrollbar-color: #7A1528 rgba(122, 21, 40, 0.12);
+    }
+    #modalColorsContainer::-webkit-scrollbar {
+      width: 6px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-track {
+      background: rgba(122, 21, 40, 0.08);
+      border-radius: 9999px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-thumb {
+      background-color: #7A1528;
+      border-radius: 9999px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-thumb:hover {
+      background-color: #BC042D;
+    }
   </style>
 </head>
 
@@ -354,6 +374,170 @@
         </div>
       </article>
 
+      <!-- PRODUCT CARD 4 (B4.png) -->
+      <article
+        class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
+
+        <!-- Design Name on Top of the Frame -->
+        <div class="w-full flex flex-col items-center justify-center mb-2.5 sm:mb-3">
+          <span
+            class="text-[9.5px] sm:text-[10.5px] font-sans font-bold text-[#8E4450] uppercase tracking-[0.22em] mb-0.5">
+            DESIGN 04 &bull; BDN-04
+          </span>
+          <h2
+            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
+            Heritage Crimson
+          </h2>
+        </div>
+
+        <!-- Saree Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
+        <div
+          class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
+          onclick="openProductDetails('B4')">
+          <img src="images/B4.png" alt="Heritage Crimson Pure Silk Bandhani Saree" draggable="false"
+            class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
+
+          <!-- 10 Available Colours Pill Indicator -->
+          <div
+            class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
+            <span class="flex -space-x-1.5 overflow-hidden">
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#9B1B30]"
+                title="Crimson Red"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#58111A]"
+                title="Wine Maroon"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0A4A3E]"
+                title="Emerald Green"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#4B286D]"
+                title="Royal Violet"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#1B3B82]"
+                title="Royal Blue"></span>
+            </span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">10 Colours</span>
+          </div>
+
+          <!-- Hover indicator pill -->
+          <div
+            class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <span
+              class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
+              <span>🔍</span>
+              <span>View Details & 10 Colours</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Buttons & Border Section (No gap between buttons and border.png, frame ends when border ends) -->
+        <div class="w-full flex flex-col items-center justify-center mt-3 sm:mt-3.5 mb-0">
+          <!-- Order Now & Contact Buttons Directly Above border.png -->
+          <div class="w-full grid grid-cols-2 gap-2 mb-0">
+            <!-- Order Now Button -->
+            <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Bandhani%20Saree%20Design%204%20(Code%3A%20BDN-04)."
+              target="_blank" rel="noopener noreferrer"
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              <span>ORDER NOW</span>
+              <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
+            </a>
+
+            <!-- Contact Button -->
+            <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Bandhani%20Saree%20Design%204%20(Code%3A%20BDN-04)."
+              target="_blank" rel="noopener noreferrer"
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
+              </svg>
+              <span>CONTACT</span>
+            </a>
+          </div>
+
+          <!-- border.png placed flush below the buttons with no gap, frame ends with border -->
+          <img src="images/border.png" alt="Ornamental Border" draggable="false"
+            class="w-full h-auto object-contain -mt-1 sm:-mt-1.5 block select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
+        </div>
+      </article>
+
+      <!-- PRODUCT CARD 5 (B5.png) -->
+      <article
+        class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
+
+        <!-- Design Name on Top of the Frame -->
+        <div class="w-full flex flex-col items-center justify-center mb-2.5 sm:mb-3">
+          <span
+            class="text-[9.5px] sm:text-[10.5px] font-sans font-bold text-[#8E4450] uppercase tracking-[0.22em] mb-0.5">
+            DESIGN 05 &bull; BDN-05
+          </span>
+          <h2
+            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
+            Imperial Violet
+          </h2>
+        </div>
+
+        <!-- Saree Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
+        <div
+          class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
+          onclick="openProductDetails('B5')">
+          <img src="images/B5.png" alt="Imperial Violet Pure Silk Bandhani Saree" draggable="false"
+            class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
+
+          <!-- 14 Available Colours Pill Indicator -->
+          <div
+            class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
+            <span class="flex -space-x-1.5 overflow-hidden">
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#4B184C]"
+                title="Imperial Violet"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#8D5B18]"
+                title="Ochre Brown"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#153E7E]"
+                title="Royal Blue"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#A6192E]"
+                title="Crimson Red"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0F5A47]"
+                title="Emerald Green"></span>
+            </span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">14 Colours</span>
+          </div>
+
+          <!-- Hover indicator pill -->
+          <div
+            class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <span
+              class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
+              <span>🔍</span>
+              <span>View Details & 14 Colours</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Buttons & Border Section (No gap between buttons and border.png, frame ends when border ends) -->
+        <div class="w-full flex flex-col items-center justify-center mt-3 sm:mt-3.5 mb-0">
+          <!-- Order Now & Contact Buttons Directly Above border.png -->
+          <div class="w-full grid grid-cols-2 gap-2 mb-0">
+            <!-- Order Now Button -->
+            <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Bandhani%20Saree%20Design%205%20(Code%3A%20BDN-05)."
+              target="_blank" rel="noopener noreferrer"
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              <span>ORDER NOW</span>
+              <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
+            </a>
+
+            <!-- Contact Button -->
+            <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Bandhani%20Saree%20Design%205%20(Code%3A%20BDN-05)."
+              target="_blank" rel="noopener noreferrer"
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
+              </svg>
+              <span>CONTACT</span>
+            </a>
+          </div>
+
+          <!-- border.png placed flush below the buttons with no gap, frame ends with border -->
+          <img src="images/border.png" alt="Ornamental Border" draggable="false"
+            class="w-full h-auto object-contain -mt-1 sm:-mt-1.5 block select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
+        </div>
+      </article>
+
     </div>
 
   </main>
@@ -387,7 +571,7 @@
       </div>
 
       <!-- Right: Specifications & Available Colours (Clean and spacious without crowding text) -->
-      <div class="w-full md:w-7/12 p-3.5 sm:p-5 md:p-6 flex flex-col justify-between select-none">
+      <div class="w-full md:w-7/12 p-3 sm:p-4 md:p-5 flex flex-col justify-between select-none overflow-hidden">
         <div>
           <!-- Badges -->
           <div class="flex items-center gap-2 mb-1.5 pr-8">
@@ -403,20 +587,9 @@
 
           <!-- Product Title -->
           <h3 id="modalProductTitle"
-            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] leading-tight mb-1">
+            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] leading-tight mb-2.5 pb-2 border-b border-[#7A1528]/15">
             Product Title
           </h3>
-
-          <!-- Price Row -->
-          <div class="flex items-baseline gap-2.5 mb-2.5 pb-2 border-b border-[#7A1528]/15">
-            <span id="modalProductPrice" class="font-sans font-bold text-lg sm:text-2xl text-[#7A1528]">₹16,499</span>
-            <span id="modalProductOriginalPrice"
-              class="font-sans text-xs sm:text-sm text-[#8E4450]/60 line-through">₹21,999</span>
-            <span
-              class="text-[10px] sm:text-[11px] font-sans font-semibold text-[#137333] bg-[#e6f4ea] px-2 py-0.5 rounded-full border border-[#137333]/20">
-              Free Shipping
-            </span>
-          </div>
 
           <!-- Available Colours Showcase (Maximized Space for 11 Color Boxes) -->
           <div class="mb-3">
@@ -432,19 +605,21 @@
               </span>
             </div>
 
-            <!-- Interactive Colour Cards Grid (4 columns, clean scrollable box with ample room) -->
+            <!-- Interactive Colour Cards Grid with Scroller -->
             <div id="modalColorsContainer"
-              class="grid grid-cols-4 sm:grid-cols-4 gap-1.5 sm:gap-2 max-h-[220px] sm:max-h-[260px] md:max-h-[280px] overflow-y-auto pr-1">
+              class="grid grid-cols-4 sm:grid-cols-4 gap-1.5 sm:gap-2 max-h-[180px] sm:max-h-[200px] md:max-h-[220px] overflow-y-auto pr-1.5 overscroll-contain">
               <!-- Rendered dynamically by openProductDetails / selectModalColor -->
             </div>
           </div>
         </div>
 
         <!-- AI Generated Colour & Design Disclaimer Warning Note -->
-        <div class="my-2 p-2.5 rounded-xl bg-[#FFF8F0] border border-amber-300/80 text-[#5C1420] flex items-start gap-2 text-[10.5px] sm:text-[11.5px] leading-snug shadow-xs select-none">
+        <div
+          class="my-2 p-2.5 rounded-xl bg-[#FFF8F0] border border-amber-300/80 text-[#5C1420] flex items-start gap-2 text-[10.5px] sm:text-[11.5px] leading-snug shadow-xs select-none">
           <span class="text-amber-600 text-sm flex-shrink-0 leading-none">⚠️</span>
           <p class="font-sans">
-            <strong class="text-[#7A1528] font-bold">Disclaimer:</strong> Please note that product colour and design motifs may vary in real life as images are AI-generated for visual concept representation.
+            <strong class="text-[#7A1528] font-bold">Disclaimer:</strong> Please note that product colour and design
+            motifs may vary in real life as images are AI-generated for visual concept representation.
           </p>
         </div>
 
@@ -738,6 +913,202 @@
             badge: 'Emerald'
           }
         ]
+      },
+      'B4': {
+        id: 'B4',
+        code: 'BDN-04',
+        title: 'Heritage Crimson Pure Silk Bandhani Saree',
+        price: '₹16,499',
+        originalPrice: '₹21,999',
+        image: 'images/B4.png',
+        colors: [
+          {
+            name: 'Close-up',
+            displayTitle: 'Bandhani Close-up',
+            image: 'images/B4.png',
+            thumb: 'images/bandhani colours/4/C1.png',
+            badge: 'Close-up'
+          },
+
+          {
+            name: 'Wine Maroon',
+            displayTitle: 'Wine Maroon',
+            image: 'images/bandhani colours/4/2.png',
+            thumb: 'images/bandhani colours/4/C2.png',
+            badge: 'Wine Maroon'
+          },
+          {
+            name: 'Berry Plum',
+            displayTitle: 'Royal Berry Plum',
+            image: 'images/bandhani colours/4/3.png',
+            thumb: 'images/bandhani colours/4/C3.png',
+            badge: 'Berry Plum'
+          },
+          {
+            name: 'Olive Green',
+            displayTitle: 'Mehendi Olive Green',
+            image: 'images/bandhani colours/4/4.png',
+            thumb: 'images/bandhani colours/4/C4.png',
+            badge: 'Olive Green'
+          },
+          {
+            name: 'Emerald Green',
+            displayTitle: 'Peacock Emerald Green',
+            image: 'images/bandhani colours/4/5.png',
+            thumb: 'images/bandhani colours/4/C5.png',
+            badge: 'Emerald'
+          },
+          {
+            name: 'Royal Violet',
+            displayTitle: 'Royal Iris Violet',
+            image: 'images/bandhani colours/4/6.png',
+            thumb: 'images/bandhani colours/4/C6.png',
+            badge: 'Royal Violet'
+          },
+          {
+            name: 'Teal Blue',
+            displayTitle: 'Ocean Teal Blue',
+            image: 'images/bandhani colours/4/7.png',
+            thumb: 'images/bandhani colours/4/C7.png',
+            badge: 'Teal Blue'
+          },
+          {
+            name: 'Imperial Plum',
+            displayTitle: 'Imperial Dark Plum',
+            image: 'images/bandhani colours/4/8.png',
+            thumb: 'images/bandhani colours/4/C8.png',
+            badge: 'Dark Plum'
+          },
+          {
+            name: 'Royal Blue',
+            displayTitle: 'Royal Sapphire Blue',
+            image: 'images/bandhani colours/4/9.png',
+            thumb: 'images/bandhani colours/4/C9.png',
+            badge: 'Royal Blue'
+          },
+          {
+            name: 'Midnight Navy',
+            displayTitle: 'Midnight Navy Blue',
+            image: 'images/bandhani colours/4/10.png',
+            thumb: 'images/bandhani colours/4/C10.png',
+            badge: 'Navy Blue'
+          }
+        ]
+      },
+      'B5': {
+        id: 'B5',
+        code: 'BDN-05',
+        title: 'Imperial Violet Pure Silk Bandhani Saree',
+        price: '₹16,499',
+        originalPrice: '₹21,999',
+        image: 'images/B5.png',
+        colors: [
+          {
+            name: 'Close-up',
+            displayTitle: 'Bandhani Close-up',
+            image: 'images/B5.png',
+            thumb: 'images/bandhani colours/5/closeup.png',
+            badge: 'Close-up'
+          },
+          {
+            name: 'Imperial Violet',
+            displayTitle: 'Imperial Royal Violet',
+            image: 'images/bandhani colours/5/9.png',
+            thumb: 'images/bandhani colours/5/C9.png',
+            badge: 'Violet'
+          },
+          {
+            name: 'Ochre Brown',
+            displayTitle: 'Ochre Cinnamon Brown',
+            image: 'images/bandhani colours/5/1.png',
+            thumb: 'images/bandhani colours/5/C1.png',
+            badge: 'Brown'
+          },
+          {
+            name: 'Royal Blue',
+            displayTitle: 'Royal Sapphire Blue',
+            image: 'images/bandhani colours/5/2.png',
+            thumb: 'images/bandhani colours/5/C2.png',
+            badge: 'Royal Blue'
+          },
+          {
+            name: 'Crimson Red',
+            displayTitle: 'Crimson Red',
+            image: 'images/bandhani colours/5/3.png',
+            thumb: 'images/bandhani colours/5/C3.png',
+            badge: 'Crimson'
+          },
+          {
+            name: 'Rani Pink',
+            displayTitle: 'Rani Hot Pink',
+            image: 'images/bandhani colours/5/4.png',
+            thumb: 'images/bandhani colours/5/C4.png',
+            badge: 'Rani Pink'
+          },
+          {
+            name: 'Rose Pink',
+            displayTitle: 'Dusty Rose Pink',
+            image: 'images/bandhani colours/5/5.png',
+            thumb: 'images/bandhani colours/5/C5.png',
+            badge: 'Rose Pink'
+          },
+          {
+            name: 'Emerald Green',
+            displayTitle: 'Emerald Bottle Green',
+            image: 'images/bandhani colours/5/6.png',
+            thumb: 'images/bandhani colours/5/C6.png',
+            badge: 'Emerald'
+          },
+          {
+            name: 'Peacock Teal',
+            displayTitle: 'Peacock Teal Blue',
+            image: 'images/bandhani colours/5/7.png',
+            thumb: 'images/bandhani colours/5/C7.png',
+            badge: 'Teal'
+          },
+          {
+            name: 'Turquoise Blue',
+            displayTitle: 'Cerulean Turquoise Blue',
+            image: 'images/bandhani colours/5/8.png',
+            thumb: 'images/bandhani colours/5/C8.png',
+            badge: 'Turquoise'
+          },
+          {
+            name: 'Deep Navy',
+            displayTitle: 'Deep Indigo Navy',
+            image: 'images/bandhani colours/5/10.png',
+            thumb: 'images/bandhani colours/5/C10.png',
+            badge: 'Deep Navy'
+          },
+          {
+            name: 'Mehendi Green',
+            displayTitle: 'Mehendi Olive Green',
+            image: 'images/bandhani colours/5/11.png',
+            thumb: 'images/bandhani colours/5/C11.png',
+            badge: 'Mehendi'
+          },
+          {
+            name: 'Midnight Blue',
+            displayTitle: 'Midnight Dark Navy',
+            image: 'images/bandhani colours/5/12.png',
+            thumb: 'images/bandhani colours/5/C12.png',
+            badge: 'Midnight Blue'
+          },
+          {
+            name: 'Wine Maroon',
+            displayTitle: 'Wine Maroon',
+            image: 'images/bandhani colours/5/13.png',
+            thumb: 'images/bandhani colours/5/C13.png',
+            badge: 'Wine Maroon'
+          },
+          {
+            name: 'Forest Green',
+            displayTitle: 'Dark Forest Green',
+            image: 'images/bandhani colours/5/14.png',
+            thumb: 'images/bandhani colours/5/C14.png',
+            badge: 'Forest Green'
+          }
+        ]
       }
     };
 
@@ -783,9 +1154,9 @@
       }
 
       // Update WhatsApp Order Button text & link
-      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) priced at ${currentProduct.price}.`;
+      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}).`;
       if (index > 0 && color.name !== 'Close-up') {
-        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour priced at ${currentProduct.price}.`;
+        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour.`;
       }
       const orderMsg = encodeURIComponent(orderMsgText);
       document.getElementById('modalWhatsAppOrderBtn').href = `https://wa.me/917567839034?text=${orderMsg}`;
@@ -807,8 +1178,6 @@
 
       document.getElementById('modalCodeBadge').textContent = 'Code: ' + p.code;
       document.getElementById('modalProductTitle').textContent = p.title;
-      document.getElementById('modalProductPrice').textContent = p.price;
-      document.getElementById('modalProductOriginalPrice').textContent = p.originalPrice;
 
       // Render Available Colours Container
       const colorsContainer = document.getElementById('modalColorsContainer');
@@ -816,8 +1185,8 @@
 
       if (p.colors && p.colors.length > 0) {
         if (colorHeader) colorHeader.style.display = 'flex';
-        const colsClass = p.colors.length > 4 ? 'grid-cols-3 sm:grid-cols-4' : (p.colors.length === 3 ? 'grid-cols-3' : (p.colors.length === 2 ? 'grid-cols-2 max-w-[280px]' : 'grid-cols-1 max-w-[150px]'));
-        colorsContainer.className = `grid ${colsClass} gap-2 sm:gap-2.5 max-h-[260px] sm:max-h-[300px] md:max-h-[330px] overflow-y-auto pr-1.5`;
+        const colsClass = p.colors.length > 4 ? 'grid-cols-4' : (p.colors.length === 3 ? 'grid-cols-3' : (p.colors.length === 2 ? 'grid-cols-2 max-w-[280px]' : 'grid-cols-1 max-w-[150px]'));
+        colorsContainer.className = `grid ${colsClass} gap-1.5 sm:gap-2 max-h-[180px] sm:max-h-[200px] md:max-h-[220px] overflow-y-auto pr-1.5 overscroll-contain`;
         colorsContainer.innerHTML = p.colors.map((c, i) => `
           <button type="button" onclick="selectModalColor(${i})"
             class="color-thumb-btn group relative rounded-xl sm:rounded-2xl overflow-hidden border ${i === selectedColorIndex ? 'border-2 border-[#7A1528] ring-2 ring-[#7A1528]/40 shadow-md bg-white scale-[1.03]' : 'border-[#E8A5A5] hover:border-[#7A1528]/60 shadow-xs bg-white/70 hover:bg-white opacity-85 hover:opacity-100'} p-1.5 sm:p-2 text-center transition-all duration-200 cursor-pointer">
@@ -838,16 +1207,22 @@
       // Auto-select Close-up option from the start itself
       selectModalColor(selectedColorIndex);
 
+      detailsModal.style.visibility = 'visible';
+      detailsModal.style.pointerEvents = 'auto';
       detailsModal.classList.remove('opacity-0', 'pointer-events-none');
-      detailsModal.classList.add('opacity-100', 'pointer-events-auto');
+      detailsModal.classList.add('opacity-100', 'pointer-events-auto', 'modal-active');
       modalContent.classList.remove('scale-95');
       modalContent.classList.add('scale-100');
       document.body.classList.add('overflow-hidden');
     }
 
     function closeProductDetails() {
+      detailsModal.style.pointerEvents = 'none';
+      detailsModal.classList.remove('opacity-100', 'pointer-events-auto', 'modal-active');
       detailsModal.classList.add('opacity-0', 'pointer-events-none');
-      detailsModal.classList.remove('opacity-100', 'pointer-events-auto');
+      setTimeout(() => {
+        if (!detailsModal.classList.contains('modal-active')) detailsModal.style.visibility = 'hidden';
+      }, 300);
       modalContent.classList.add('scale-95');
       modalContent.classList.remove('scale-100');
       document.body.classList.remove('overflow-hidden');
@@ -863,6 +1238,10 @@
       if (e.key === 'Escape') {
         closeProductDetails();
       }
+    });
+
+    window.addEventListener('pageshow', () => {
+      if (typeof closeProductDetails === 'function') closeProductDetails();
     });
   </script>
 

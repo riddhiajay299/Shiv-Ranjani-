@@ -194,9 +194,22 @@
       transform: scale(0.95) !important;
     }
 
-    /* Modal Clean Fade In / Fade Out */
+    /* Modal Clean Fade In / Fade Out & Absolute Click-through Guarantee */
     #detailsModal {
       transition: opacity 0.32s var(--fm-ease-inout), backdrop-filter 0.32s var(--fm-ease-inout) !important;
+    }
+
+    #detailsModal:not(.modal-active),
+    #detailsModal.pointer-events-none,
+    #detailsModal.opacity-0 {
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+
+    #detailsModal.modal-active,
+    #detailsModal.opacity-100 {
+      pointer-events: auto !important;
+      visibility: visible !important;
     }
 
     #detailsModal > div {
@@ -401,25 +414,36 @@
     }, 60);
   }
 
-  // 4. Modal Clean Fade In / Fade Out Enhancer
+  // 4. Modal Clean Fade In / Fade Out Enhancer & Click-through Guard
   function setupModalMotion() {
     const modal = document.getElementById('detailsModal');
     if (!modal) return;
+
+    // Ensure modal starts completely closed, non-interactive, and invisible
+    modal.style.pointerEvents = 'none';
+    modal.style.visibility = 'hidden';
+    modal.classList.remove('modal-active', 'pointer-events-auto', 'opacity-100');
+    modal.classList.add('pointer-events-none', 'opacity-0');
 
     const originalOpen = window.openProductDetails;
     if (typeof originalOpen === 'function' && !window.__darshana_modal_hooked) {
       window.__darshana_modal_hooked = true;
       window.openProductDetails = function (productId, colorIdx = 0) {
-        originalOpen(productId, colorIdx);
+        if (typeof originalOpen === 'function') {
+          originalOpen(productId, colorIdx);
+        }
 
+        modal.style.visibility = 'visible';
+        modal.style.pointerEvents = 'auto';
         modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-100', 'pointer-events-auto', 'modal-active');
 
         const card = modal.querySelector('div');
         if (card) {
           card.classList.remove('scale-95');
           card.classList.add('scale-100');
         }
+        document.body.classList.add('overflow-hidden');
       };
     }
 
@@ -433,15 +457,62 @@
           card.classList.add('scale-95');
         }
 
-        modal.classList.remove('opacity-100');
-        modal.classList.add('opacity-0');
+        // IMMEDIATELY disable pointer events so clicks pass through instantly
+        modal.style.pointerEvents = 'none';
+        modal.classList.remove('opacity-100', 'pointer-events-auto', 'modal-active');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.classList.remove('overflow-hidden');
+
+        if (typeof originalClose === 'function') {
+          originalClose();
+        }
 
         setTimeout(() => {
-          modal.classList.add('pointer-events-none');
-          document.body.classList.remove('overflow-hidden');
-        }, 280);
+          if (!modal.classList.contains('modal-active')) {
+            modal.style.visibility = 'hidden';
+            modal.style.pointerEvents = 'none';
+          }
+        }, 300);
       };
     }
+
+    // Handle backdrop click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        if (typeof window.closeProductDetails === 'function') {
+          window.closeProductDetails();
+        }
+      }
+    });
+
+    // Handle Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (typeof window.closeProductDetails === 'function') {
+          window.closeProductDetails();
+        }
+      }
+    });
+
+    // Handle BFCache (pageshow) and navigation restoration
+    window.addEventListener('pageshow', () => {
+      if (modal) {
+        modal.style.pointerEvents = 'none';
+        modal.style.visibility = 'hidden';
+        modal.classList.remove('modal-active', 'opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+      }
+      document.body.classList.remove('overflow-hidden');
+    });
+
+    // Handle mobile / browser back button (popstate)
+    window.addEventListener('popstate', () => {
+      if (modal && modal.classList.contains('modal-active')) {
+        if (typeof window.closeProductDetails === 'function') {
+          window.closeProductDetails();
+        }
+      }
+    });
   }
 
   // 5. Initializer on DOM Ready

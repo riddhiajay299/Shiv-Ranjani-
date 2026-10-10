@@ -54,6 +54,26 @@
     .aspect-3-4 {
       aspect-ratio: 3 / 4;
     }
+
+    /* Custom Luxury Scrollbar for Modal Colours */
+    #modalColorsContainer {
+      scrollbar-width: thin;
+      scrollbar-color: #7A1528 rgba(122, 21, 40, 0.12);
+    }
+    #modalColorsContainer::-webkit-scrollbar {
+      width: 6px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-track {
+      background: rgba(122, 21, 40, 0.08);
+      border-radius: 9999px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-thumb {
+      background-color: #7A1528;
+      border-radius: 9999px;
+    }
+    #modalColorsContainer::-webkit-scrollbar-thumb:hover {
+      background-color: #BC042D;
+    }
   </style>
 </head>
 
@@ -110,10 +130,10 @@
   <!-- Products Section: White Framed Cards with Design Name at Top, Product Images (3:4 Aspect Ratio), Order Now & Contact Buttons sitting flush above border.png -->
   <main class="relative z-10 flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 py-8 sm:py-12 md:py-16">
 
-    <!-- Products Grid (6 High-Resolution Luxury Dupatta Products) -->
+    <!-- Products Grid (Matching Bandhani Collection 3-Column Luxury Layout) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
 
-      <!-- PRODUCT CARD 1 (A1.png) -->
+      <!-- PRODUCT CARD 1 (images/dupatta/1.png) -->
       <article
         class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
 
@@ -125,28 +145,30 @@
           </span>
           <h2
             class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Crimson Red
+            Emerald Green
           </h2>
         </div>
 
         <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
         <div
           class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A1')">
-          <img src="images/A1.png" alt="Crimson Red Pure Silk Dupatta" draggable="false"
+          onclick="openProductDetails('D1')">
+          <img src="images/dupatta/1.png" alt="Emerald Green Lehariya & Bandhani Dupatta" draggable="false"
             class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
 
-          <!-- 3 Available Colours Pill Indicator -->
+          <!-- 10 Available Colours Pill Indicator (Matching Bandhani style) -->
           <div
             class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
             <span class="flex -space-x-1.5 overflow-hidden">
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#8E1528]"
-                title="Crimson Red"></span>
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#1C314E]"
-                title="Indigo Blue"></span>
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#521D34]" title="Wine Plum"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0D5C3A]"
+                title="Emerald Green"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D61B72]"
+                title="Rani Pink"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#1A3A68]" title="Royal Blue"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D4AF37]" title="Haldi Yellow"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#8E1528]" title="Wine Maroon"></span>
             </span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">4 Colours</span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">10 Colours</span>
           </div>
 
           <!-- Hover indicator pill -->
@@ -155,7 +177,7 @@
             <span
               class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
               <span>🔍</span>
-              <span>View Details & 4 Colours</span>
+              <span>View Details & 10 Colours</span>
             </span>
           </div>
         </div>
@@ -167,20 +189,20 @@
             <!-- Order Now Button -->
             <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%201%20(Code%3A%20DPT-01)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
+              <span class="whitespace-nowrap">ORDER NOW</span>
               <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
             </a>
 
             <!-- Contact Button -->
             <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%201%20(Code%3A%20DPT-01)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
               <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
                 <path
                   d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
               </svg>
-              <span>CONTACT</span>
+              <span class="whitespace-nowrap">CONTACT</span>
             </a>
           </div>
 
@@ -190,7 +212,7 @@
         </div>
       </article>
 
-      <!-- PRODUCT CARD 2 (A2.png) -->
+      <!-- PRODUCT CARD 2 (images/dupatta/2.png) -->
       <article
         class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
 
@@ -202,29 +224,30 @@
           </span>
           <h2
             class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Indigo Blue
+            Rani Pink
           </h2>
         </div>
 
-        <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
+        <!-- Product Image Container -->
         <div
           class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A2')">
-          <img src="images/A2.png" alt="Indigo & Rust Paisley Dupatta" draggable="false"
+          onclick="openProductDetails('D2')">
+          <img src="images/dupatta/2.png" alt="Rani Pink Zari Bandhani Dupatta" draggable="false"
             class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
 
-          <!-- 3 Available Colours Pill Indicator -->
+          <!-- 10 Available Colours Pill Indicator (Matching Bandhani style) -->
           <div
             class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
             <span class="flex -space-x-1.5 overflow-hidden">
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#1C314E]"
-                title="Royal Indigo"></span>
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#A8422B]"
-                title="Rust Terracotta"></span>
-              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D48237]"
-                title="Warm Amber"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D61B72]"
+                title="Rani Pink"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#5E2B82]"
+                title="Royal Violet"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0D605E]" title="Peacock Teal"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D4A017]" title="Haldi Yellow"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#8E1528]" title="Wine Maroon"></span>
             </span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">3 Colours</span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">10 Colours</span>
           </div>
 
           <!-- Hover indicator pill -->
@@ -233,7 +256,7 @@
             <span
               class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
               <span>🔍</span>
-              <span>View Details & 3 Colours</span>
+              <span>View Details & 10 Colours</span>
             </span>
           </div>
         </div>
@@ -245,20 +268,20 @@
             <!-- Order Now Button -->
             <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%202%20(Code%3A%20DPT-02)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
+              <span class="whitespace-nowrap">ORDER NOW</span>
               <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
             </a>
 
             <!-- Contact Button -->
             <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%202%20(Code%3A%20DPT-02)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
               <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
                 <path
                   d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
               </svg>
-              <span>CONTACT</span>
+              <span class="whitespace-nowrap">CONTACT</span>
             </a>
           </div>
 
@@ -268,7 +291,7 @@
         </div>
       </article>
 
-      <!-- PRODUCT CARD 3 (A3.png) -->
+      <!-- PRODUCT CARD 3 (images/dupatta/3.png) -->
       <article
         class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
 
@@ -280,22 +303,30 @@
           </span>
           <h2
             class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Charcoal Onyx
+            Royal Blue
           </h2>
         </div>
 
-        <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
+        <!-- Product Image Container -->
         <div
           class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A3')">
-          <img src="images/A3.png" alt="Midnight Charcoal & Red Dupatta" draggable="false"
+          onclick="openProductDetails('D3')">
+          <img src="images/dupatta/3.png" alt="Royal Blue Bandhani Dupatta" draggable="false"
             class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
 
-          <!-- Colour Pill Indicator -->
+          <!-- 10 Available Colours Pill Indicator (Matching Bandhani style) -->
           <div
             class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
-            <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#2B292C]" title="Charcoal Onyx"></span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">Charcoal Onyx</span>
+            <span class="flex -space-x-1.5 overflow-hidden">
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0F356B]"
+                title="Royal Blue"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D61B72]"
+                title="Rani Pink"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#8E1528]" title="Crimson Red"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D4A017]" title="Haldi Yellow"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#0D605E]" title="Peacock Teal"></span>
+            </span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">10 Colours</span>
           </div>
 
           <!-- Hover indicator pill -->
@@ -304,7 +335,7 @@
             <span
               class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
               <span>🔍</span>
-              <span>View Details & Swatch</span>
+              <span>View Details & 10 Colours</span>
             </span>
           </div>
         </div>
@@ -316,20 +347,20 @@
             <!-- Order Now Button -->
             <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%203%20(Code%3A%20DPT-03)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
+              <span class="whitespace-nowrap">ORDER NOW</span>
               <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
             </a>
 
             <!-- Contact Button -->
             <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%203%20(Code%3A%20DPT-03)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
               <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
                 <path
                   d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
               </svg>
-              <span>CONTACT</span>
+              <span class="whitespace-nowrap">CONTACT</span>
             </a>
           </div>
 
@@ -339,7 +370,7 @@
         </div>
       </article>
 
-      <!-- PRODUCT CARD 4 (A4.png) -->
+      <!-- PRODUCT CARD 4 (images/dupatta/4.png) -->
       <article
         class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
 
@@ -351,22 +382,33 @@
           </span>
           <h2
             class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Mulberry Plum
+            Haldi Yellow
           </h2>
         </div>
 
-        <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
+        <!-- Product Image Container -->
         <div
           class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A4')">
-          <img src="images/A4.png" alt="Royal Plum Tissue Zari Dupatta" draggable="false"
+          onclick="openProductDetails('D4')">
+          <img src="images/dupatta/4.png" alt="Haldi Yellow Heritage Bandhani Dupatta" draggable="false"
             class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
 
-          <!-- Colour Pill Indicator -->
+          <!-- 10 Available Colours Pill Indicator (Matching Bandhani style) -->
           <div
             class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
-            <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#4A1525]" title="Mulberry Plum"></span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">Mulberry Plum</span>
+            <span class="flex -space-x-1.5 overflow-hidden">
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#D4A017]"
+                title="Haldi Yellow"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#16B83E]"
+                title="Parrot Green"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#661122]"
+                title="Wine Maroon"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#C8142E]"
+                title="Crimson Red"></span>
+              <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#5A1C80]"
+                title="Royal Violet"></span>
+            </span>
+            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">10 Colours</span>
           </div>
 
           <!-- Hover indicator pill -->
@@ -375,7 +417,7 @@
             <span
               class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
               <span>🔍</span>
-              <span>View Details & Swatch</span>
+              <span>View Details & 10 Colours</span>
             </span>
           </div>
         </div>
@@ -387,162 +429,20 @@
             <!-- Order Now Button -->
             <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%204%20(Code%3A%20DPT-04)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
+              <span class="whitespace-nowrap">ORDER NOW</span>
               <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
             </a>
 
             <!-- Contact Button -->
             <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%204%20(Code%3A%20DPT-04)."
               target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
+              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold whitespace-nowrap transition-all duration-300 shadow-sm hover:shadow-md">
               <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
                 <path
                   d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
               </svg>
-              <span>CONTACT</span>
-            </a>
-          </div>
-
-          <!-- border.png placed flush below the buttons with no gap, frame ends with border -->
-          <img src="images/border.png" alt="Ornamental Border" draggable="false"
-            class="w-full h-auto object-contain -mt-1 sm:-mt-1.5 block select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
-        </div>
-      </article>
-
-      <!-- PRODUCT CARD 5 (A5.png) -->
-      <article
-        class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
-
-        <!-- Design Name on Top of the Frame -->
-        <div class="w-full flex flex-col items-center justify-center mb-2.5 sm:mb-3">
-          <span
-            class="text-[9.5px] sm:text-[10.5px] font-sans font-bold text-[#8E4450] uppercase tracking-[0.22em] mb-0.5">
-            DESIGN 05 &bull; DPT-05
-          </span>
-          <h2
-            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Vintage Maroon
-          </h2>
-        </div>
-
-        <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
-        <div
-          class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A5')">
-          <img src="images/A5.png" alt="Vintage Maroon & Ochre Dupatta" draggable="false"
-            class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
-
-          <!-- Colour Pill Indicator -->
-          <div
-            class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
-            <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#6A1B29]" title="Vintage Maroon"></span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">Vintage Maroon</span>
-          </div>
-
-          <!-- Hover indicator pill -->
-          <div
-            class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-            <span
-              class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
-              <span>🔍</span>
-              <span>View Details & Swatch</span>
-            </span>
-          </div>
-        </div>
-
-        <!-- Buttons & Border Section (No gap between buttons and border.png, frame ends when border ends) -->
-        <div class="w-full flex flex-col items-center justify-center mt-3 sm:mt-3.5 mb-0">
-          <!-- Order Now & Contact Buttons Directly Above border.png -->
-          <div class="w-full grid grid-cols-2 gap-2 mb-0">
-            <!-- Order Now Button -->
-            <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%205%20(Code%3A%20DPT-05)."
-              target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
-              <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
-            </a>
-
-            <!-- Contact Button -->
-            <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%205%20(Code%3A%20DPT-05)."
-              target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
-                <path
-                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
-              </svg>
-              <span>CONTACT</span>
-            </a>
-          </div>
-
-          <!-- border.png placed flush below the buttons with no gap, frame ends with border -->
-          <img src="images/border.png" alt="Ornamental Border" draggable="false"
-            class="w-full h-auto object-contain -mt-1 sm:-mt-1.5 block select-none pointer-events-none opacity-95 transition-transform duration-300 group-hover:scale-105" />
-        </div>
-      </article>
-
-      <!-- PRODUCT CARD 6 (A6.png) -->
-      <article
-        class="group relative bg-white rounded-2xl sm:rounded-3xl pt-3.5 px-3.5 pb-0 sm:pt-4 sm:px-4 sm:pb-0 md:pt-5 md:px-5 md:pb-0 border-2 border-[#E8A5A5] hover:border-[#BC042D] shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(188,4,45,0.22)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden select-none">
-
-        <!-- Design Name on Top of the Frame -->
-        <div class="w-full flex flex-col items-center justify-center mb-2.5 sm:mb-3">
-          <span
-            class="text-[9.5px] sm:text-[10.5px] font-sans font-bold text-[#8E4450] uppercase tracking-[0.22em] mb-0.5">
-            DESIGN 06 &bull; DPT-06
-          </span>
-          <h2
-            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] tracking-wide text-center leading-tight group-hover:text-[#BC042D] transition-colors">
-            Vermilion Red
-          </h2>
-        </div>
-
-        <!-- Product Image Container (Fixed 3:4 Aspect Ratio, Click to view image and details) -->
-        <div
-          class="w-full aspect-3-4 aspect-[3/4] relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E8A5A5]/50 shadow-sm bg-[#faf4f2] cursor-pointer group/img"
-          onclick="openProductDetails('A6')">
-          <img src="images/A6.png" alt="Vermilion Floral Mandala Dupatta" draggable="false"
-            class="w-full h-full object-cover object-top block select-none transition-transform duration-500 group-hover/img:scale-[1.03]" />
-
-          <!-- Colour Pill Indicator -->
-          <div
-            class="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10.5px] font-bold text-[#7A1528] border border-[#E8A5A5] shadow-sm flex items-center gap-1.5 z-10">
-            <span class="inline-block w-3 h-3 rounded-full border border-white bg-[#B82828]" title="Vermilion Red"></span>
-            <span class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] tracking-wide">Vermilion Red</span>
-          </div>
-
-          <!-- Hover indicator pill -->
-          <div
-            class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-            <span
-              class="bg-[#1A070A]/85 text-[#FDF2F4] text-xs font-sans font-semibold px-3.5 py-1.5 rounded-full border border-[#D4AF37]/60 shadow-lg tracking-wider backdrop-blur-xs flex items-center gap-1.5">
-              <span>🔍</span>
-              <span>View Details & Swatch</span>
-            </span>
-          </div>
-        </div>
-
-        <!-- Buttons & Border Section (No gap between buttons and border.png, frame ends when border ends) -->
-        <div class="w-full flex flex-col items-center justify-center mt-3 sm:mt-3.5 mb-0">
-          <!-- Order Now & Contact Buttons Directly Above border.png -->
-          <div class="w-full grid grid-cols-2 gap-2 mb-0">
-            <!-- Order Now Button -->
-            <a href="https://wa.me/917567839034?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20would%20like%20to%20order%20Dupatta%20Design%206%20(Code%3A%20DPT-06)."
-              target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528] bg-[#7A1528] hover:bg-[#5B101E] text-[#FDF2F4] hover:text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <span>ORDER NOW</span>
-              <span class="transition-transform duration-200 group-hover/btn:translate-x-0.5">&rarr;</span>
-            </a>
-
-            <!-- Contact Button -->
-            <a href="https://wa.me/919033777923?text=Hello%20DARSHANA%20%2F%20Shiv%20Ranjani%2C%20I%20have%20an%20enquiry%20about%20Dupatta%20Design%206%20(Code%3A%20DPT-06)."
-              target="_blank" rel="noopener noreferrer"
-              class="group/btn inline-flex items-center justify-center gap-1.5 border border-[#7A1528]/60 hover:border-[#7A1528] bg-white hover:bg-[#FDF2F4] text-[#7A1528] px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs md:text-xs uppercase tracking-[0.14em] font-sans font-bold transition-all duration-300 shadow-sm hover:shadow-md">
-              <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24">
-                <path
-                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
-              </svg>
-              <span>CONTACT</span>
+              <span class="whitespace-nowrap">CONTACT</span>
             </a>
           </div>
 
@@ -557,7 +457,7 @@
   </main>
 
   <!-- Interactive Modal for High-Res Image & Complete Product Details (Full image on small screens with scrollable details; Side-by-side on big screens) -->
-  <div id="detailsModal"
+  <div id="detailsModal" style="pointer-events: none; visibility: hidden;"
     class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-start md:items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto">
 
     <div
@@ -584,74 +484,65 @@
         </div>
       </div>
 
-      <!-- Right: Detailed Specifications & Action Buttons (Spacious without description clutter) -->
-      <div class="w-full md:w-7/12 p-3.5 sm:p-5 md:p-6 flex flex-col justify-between select-none">
+      <!-- Right: Detailed Specifications & Action Buttons (Compact & perfectly fitted, scroller ONLY on colors) -->
+      <div class="w-full md:w-7/12 p-3 sm:p-4 md:p-5 flex flex-col justify-between select-none overflow-hidden">
         <div>
           <!-- Badges -->
-          <div class="flex items-center gap-2 mb-1.5 pr-8">
+          <div class="flex items-center gap-2 mb-1 pr-8">
             <span
-              class="text-[10px] sm:text-[11px] uppercase tracking-wider font-sans font-bold text-[#7A1528] bg-white/85 border border-[#7A1528]/20 px-2.5 py-0.5 rounded-full shadow-xs">
+              class="text-[9.5px] sm:text-[10px] uppercase tracking-wider font-sans font-bold text-[#7A1528] bg-white/85 border border-[#7A1528]/20 px-2 py-0.5 rounded-full shadow-xs">
               Authentic Dupatta
             </span>
             <span
-              class="text-[10px] sm:text-[11px] font-sans text-[#137333] font-semibold bg-[#e6f4ea] px-2.5 py-0.5 rounded-full border border-[#137333]/20 shadow-xs">
+              class="text-[9.5px] sm:text-[10px] font-sans text-[#137333] font-semibold bg-[#e6f4ea] px-2 py-0.5 rounded-full border border-[#137333]/20 shadow-xs">
               Ready to Dispatch
             </span>
           </div>
 
           <!-- Product Title -->
           <h3 id="modalProductTitle"
-            class="font-cormorant italic font-bold text-xl sm:text-2xl md:text-[25px] text-[#7A1528] leading-tight mb-1">
+            class="font-cormorant italic font-bold text-lg sm:text-xl md:text-2xl text-[#7A1528] leading-tight mb-2 pb-1.5 border-b border-[#7A1528]/15">
             Product Title
           </h3>
 
-          <!-- Price Row -->
-          <div class="flex items-baseline gap-2.5 mb-2.5 pb-2 border-b border-[#7A1528]/15">
-            <span id="modalProductPrice"
-              class="font-sans font-bold text-lg sm:text-2xl text-[#7A1528]">₹8,499</span>
-            <span id="modalProductOriginalPrice"
-              class="font-sans text-xs sm:text-sm text-[#8E4450]/60 line-through">₹11,999</span>
-            <span
-              class="text-[10px] sm:text-[11px] font-sans font-semibold text-[#137333] bg-[#e6f4ea] px-2 py-0.5 rounded-full border border-[#137333]/20">
-              Free Shipping
-            </span>
-          </div>
-
           <!-- Available Colours Showcase -->
-          <div class="mb-3">
-            <div id="modalColorsHeader" class="flex items-center justify-between mb-2">
+          <div class="mb-1.5">
+            <div id="modalColorsHeader" class="flex items-center justify-between mb-1">
               <span
-                class="text-[11px] sm:text-xs font-bold text-[#7A1528] uppercase tracking-wider flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-[#7A1528] inline-block animate-pulse"></span>
+                class="text-[10.5px] sm:text-[11px] font-bold text-[#7A1528] uppercase tracking-wider flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#7A1528] inline-block animate-pulse"></span>
                 <span>Select Colour:</span>
               </span>
               <span id="modalSelectedColorTitle"
-                class="text-[11px] sm:text-xs font-bold text-[#7A1528] bg-white/95 px-3 py-0.5 rounded-full border border-[#E8A5A5] shadow-xs">
+                class="text-[10px] sm:text-[11px] font-bold text-[#7A1528] bg-white/95 px-2.5 py-0.5 rounded-full border border-[#E8A5A5] shadow-xs truncate max-w-[210px]">
                 Crimson Madder Red
               </span>
             </div>
 
-            <!-- Interactive Colour Cards Grid (Large, fully visible boxes) -->
-            <div id="modalColorsContainer" class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 max-h-[260px] sm:max-h-[300px] overflow-y-auto pr-1">
+            <!-- Interactive Colour Cards Grid with Scroller ONLY here -->
+            <div id="modalColorsContainer"
+              class="grid grid-cols-4 sm:grid-cols-4 gap-1 sm:gap-1.5 max-h-[145px] sm:max-h-[155px] md:max-h-[165px] overflow-y-auto pr-1.5 overscroll-contain">
               <!-- Rendered dynamically by openProductDetails / selectModalColor -->
             </div>
           </div>
         </div>
 
         <!-- AI Generated Colour & Design Disclaimer Warning Note -->
-        <div class="my-2 p-2.5 rounded-xl bg-[#FFF8F0] border border-amber-300/80 text-[#5C1420] flex items-start gap-2 text-[10.5px] sm:text-[11.5px] leading-snug shadow-xs select-none">
-          <span class="text-amber-600 text-sm flex-shrink-0 leading-none">⚠️</span>
+        <div
+          class="my-1.5 p-2 rounded-xl bg-[#FFF8F0] border border-amber-300/80 text-[#5C1420] flex items-start gap-1.5 text-[9.5px] sm:text-[10px] leading-snug shadow-xs select-none">
+          <span class="text-amber-600 text-xs flex-shrink-0 leading-none">⚠️</span>
           <p class="font-sans">
-            <strong class="text-[#7A1528] font-bold">Disclaimer:</strong> Please note that product colour and design motifs may vary in real life as images are AI-generated for visual concept representation.
+            <strong class="text-[#7A1528] font-bold">Disclaimer:</strong> Please note that product colour and design
+            motifs may vary in real life as images are AI-generated for visual concept representation.
           </p>
         </div>
 
         <!-- Action Buttons inside Modal -->
-        <div class="space-y-1.5 pt-2 border-t border-[#7A1528]/15">
+        <div class="space-y-1 pt-1.5 border-t border-[#7A1528]/15">
           <!-- Order on WhatsApp -->
           <a id="modalWhatsAppOrderBtn" href="#" target="_blank" rel="noopener noreferrer"
-            class="w-full bg-[#25D366] hover:bg-[#1eb757] text-white py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-sans font-bold tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            class="w-full bg-[#25D366] hover:bg-[#1eb757] text-white py-2 sm:py-2.5 rounded-xl text-xs sm:text-[13px] font-sans font-bold tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
               <path
                 d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.146-.532-1.722-.72-2.827-2.485-2.913-2.6-.086-.115-.693-.923-.693-1.76 0-.838.433-1.25.589-1.42.155-.17.34-.213.453-.213.114 0 .227.001.326.006.104.005.244-.04.382.291.144.346.49 1.196.533 1.284.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.305c-.087.098-.178.204-.077.378.101.173.449.741.963 1.2.662.591 1.221.774 1.394.86.173.086.274.072.375-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.563c.173.087.289.13.332.202.043.072.043.418-.101.823z" />
             </svg>
@@ -660,7 +551,7 @@
 
           <!-- Contact Styling Team -->
           <a id="modalWhatsAppContactBtn" href="#" target="_blank" rel="noopener noreferrer"
-            class="w-full bg-white hover:bg-[#7A1528] text-[#7A1528] hover:text-white border border-[#7A1528]/35 py-1.5 sm:py-2 rounded-2xl text-xs font-sans font-semibold tracking-wider transition-all flex items-center justify-center gap-2 shadow-xs">
+            class="w-full bg-white hover:bg-[#7A1528] text-[#7A1528] hover:text-white border border-[#7A1528]/35 py-1.5 rounded-xl text-[11px] sm:text-xs font-sans font-semibold tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-xs">
             <span>💬 Inquire & Contact Support (9033777923)</span>
           </a>
         </div>
@@ -718,147 +609,139 @@
   <script>
     // Product details catalog data for Dupattas
     const dupattaProducts = {
-      'A1': {
-        id: 'A1',
+      'D1': {
+        id: 'D1',
         code: 'DPT-01',
-        title: 'Crimson Red Pure Silk Dupatta',
+        title: 'Emerald Green Lehariya & Bandhani Dupatta',
+        price: '₹7,999',
+        originalPrice: '₹10,999',
+        image: 'images/dupatta/1.png',
+        desc: 'Handcrafted pure silk dupatta in royal emerald green featuring authentic lehariya diagonal waves, delicate bandhej tie-dye motifs, and festive zari borders.',
+        colors: [
+          {
+            name: 'Emerald Green',
+            displayTitle: 'Emerald Green (Full Draped View)',
+            image: 'images/dupatta/1.png',
+            thumb: 'images/dupatta/1.png',
+            badge: 'Emerald Green'
+          }
+        ]
+      },
+      'D2': {
+        id: 'D2',
+        code: 'DPT-02',
+        title: 'Rani Pink Zari Bandhani Dupatta',
         price: '₹8,499',
         originalPrice: '₹11,999',
-        image: 'images/A1.png',
-        closeupImage: 'images/A1.png',
-        desc: 'Handcrafted luxury heritage Dupatta with rich floral motifs, royal geometric borders, and an opulent shimmer finish on pure silk.',
+        image: 'images/dupatta/2.png',
+        desc: 'Opulent rani magenta pink pure bandhani dupatta adorned with dense geometric jaal bandhej and a regal gold zari border with delicate jhumki beads.',
+        colors: [
+          {
+            name: 'Rani Pink',
+            displayTitle: 'Rani Pink (Full Draped View)',
+            image: 'images/dupatta/2.png',
+            thumb: 'images/dupatta/2.png',
+            badge: 'Rani Pink'
+          }
+        ]
+      },
+      'D3': {
+        id: 'D3',
+        code: 'DPT-03',
+        title: 'Royal Blue Bandhani Dupatta',
+        price: '₹8,299',
+        originalPrice: '₹11,499',
+        image: 'images/dupatta/3.png',
+        desc: 'Mesmerizing royal midnight blue dupatta with intricate golden-yellow wave bandhej clusters and opulent gold tissue border.',
+        colors: [
+          {
+            name: 'Royal Blue',
+            displayTitle: 'Royal Blue (Full Draped View)',
+            image: 'images/dupatta/3.png',
+            thumb: 'images/dupatta/3.png',
+            badge: 'Royal Blue'
+          }
+        ]
+      },
+      'D4': {
+        id: 'D4',
+        code: 'DPT-04',
+        title: 'Haldi Yellow Heritage Bandhani Dupatta',
+        price: '₹8,999',
+        originalPrice: '₹12,500',
+        image: 'images/dupatta/4.png',
+        desc: 'Radiant haldi mustard yellow heritage silk dupatta embellished with floral vine bandhani motifs and metallic tissue frill borders. Available in 10 magnificent colorways.',
         colors: [
           {
             name: 'Close-up',
-            displayTitle: 'Dupatta Close-up',
-            image: 'images/A1.png',
-            thumb: 'images/A1.png',
+            displayTitle: 'Fabric & Zari Border Close-up',
+            image: 'images/dupatta/4.png',
+            thumb: 'images/dupatta/4/closeup.png',
             badge: 'Close-up'
+          },
+
+          {
+            name: 'Parrot Green',
+            displayTitle: 'Parrot Lime Green',
+            image: 'images/dupatta/4/1.png',
+            thumb: 'images/dupatta/4/C1.png',
+            badge: 'Parrot Green'
+          },
+          {
+            name: 'Wine Maroon',
+            displayTitle: 'Deep Wine Maroon',
+            image: 'images/dupatta/4/2.png',
+            thumb: 'images/dupatta/4/C2.png',
+            badge: 'Wine Maroon'
           },
           {
             name: 'Crimson Red',
-            displayTitle: 'Crimson Madder Red',
-            image: 'images/ajrakh colours/1/colour1.png',
-            thumb: 'images/ajrakh colours/1/1.png',
+            displayTitle: 'Crimson Scarlet Red',
+            image: 'images/dupatta/4/3.png',
+            thumb: 'images/dupatta/4/C3.png',
             badge: 'Crimson Red'
           },
           {
-            name: 'Indigo Blue',
-            displayTitle: 'Royal Indigo Blue',
-            image: 'images/ajrakh colours/1/colour2.png',
-            thumb: 'images/ajrakh colours/1/2.png',
-            badge: 'Indigo Blue'
+            name: 'Royal Violet',
+            displayTitle: 'Royal Violet Purple',
+            image: 'images/dupatta/4/4.png',
+            thumb: 'images/dupatta/4/C4.png',
+            badge: 'Royal Violet'
           },
           {
-            name: 'Wine Plum',
-            displayTitle: 'Mulberry Wine Plum',
-            image: 'images/ajrakh colours/1/colour3.png',
-            thumb: 'images/ajrakh colours/1/3.png',
-            badge: 'Wine Plum'
-          }
-        ]
-      },
-      'A2': {
-        id: 'A2',
-        code: 'DPT-02',
-        title: 'Indigo & Rust Paisley Dupatta',
-        price: '₹7,999',
-        originalPrice: '₹10,500',
-        image: 'images/A2.png',
-        desc: 'Deep indigo and rust hues with classical mango paisley motifs, lightweight drape, and artisanal fringe finish.',
-        colors: [
-          {
-            name: 'Close-up',
-            displayTitle: 'Dupatta Close-up',
-            image: 'images/A2.png',
-            thumb: 'images/ajrakh colours/closeup 2.png',
-            badge: 'Close-up'
+            name: 'Bottle Green',
+            displayTitle: 'Deep Bottle Green',
+            image: 'images/dupatta/4/5.png',
+            thumb: 'images/dupatta/4/C5.png',
+            badge: 'Bottle Green'
           },
           {
-            name: 'Royal Indigo',
-            displayTitle: 'Royal Indigo Blue',
-            image: 'images/ajrakh colours/2/colour 1.png',
-            thumb: 'images/ajrakh colours/2/1.png',
-            badge: 'Royal Indigo'
+            name: 'Rani Pink',
+            displayTitle: 'Rani Magenta Pink',
+            image: 'images/dupatta/4/6.png',
+            thumb: 'images/dupatta/4/C6.png',
+            badge: 'Rani Pink'
           },
           {
-            name: 'Rust Terracotta',
-            displayTitle: 'Rust Terracotta',
-            image: 'images/ajrakh colours/2/colour 2.png',
-            thumb: 'images/ajrakh colours/2/2.png',
-            badge: 'Rust Red'
-          }
-        ]
-      },
-      'A3': {
-        id: 'A3',
-        code: 'DPT-03',
-        title: 'Midnight Charcoal & Red Dupatta',
-        price: '₹8,299',
-        originalPrice: '₹11,000',
-        image: 'images/A3.png',
-        desc: 'Dramatic midnight onyx base embellished with vermilion-red accents, chevron borders, and fine zari detailing.',
-        colors: [
+            name: 'Plum Purple',
+            displayTitle: 'Imperial Plum Purple',
+            image: 'images/dupatta/4/7.png',
+            thumb: 'images/dupatta/4/C7.png',
+            badge: 'Plum Purple'
+          },
           {
-            name: 'Midnight Charcoal & Red',
-            displayTitle: 'Midnight Charcoal & Red',
-            image: 'images/A3.png',
-            thumb: 'images/A3.png',
-            badge: 'Charcoal Onyx'
-          }
-        ]
-      },
-      'A4': {
-        id: 'A4',
-        code: 'DPT-04',
-        title: 'Royal Plum Tissue Zari Dupatta',
-        price: '₹8,999',
-        originalPrice: '₹12,500',
-        image: 'images/A4.png',
-        desc: 'Imperial mulberry plum silhouette layered with paisley panels, gold tissue zari border, and feather-light fall.',
-        colors: [
+            name: 'Peacock Blue',
+            displayTitle: 'Peacock Teal Blue',
+            image: 'images/dupatta/4/8.png',
+            thumb: 'images/dupatta/4/C8.png',
+            badge: 'Peacock Blue'
+          },
           {
-            name: 'Imperial Mulberry Plum',
-            displayTitle: 'Imperial Mulberry Plum',
-            image: 'images/A4.png',
-            thumb: 'images/A4.png',
-            badge: 'Mulberry Plum'
-          }
-        ]
-      },
-      'A5': {
-        id: 'A5',
-        code: 'DPT-05',
-        title: 'Vintage Maroon & Ochre Dupatta',
-        price: '₹8,499',
-        originalPrice: '₹11,499',
-        image: 'images/A5.png',
-        desc: 'Deep rustic madder root maroon with ochre mud-resist accents, elephant frieze border, and traditional golden edge.',
-        colors: [
-          {
-            name: 'Madder Maroon & Ochre Gold',
-            displayTitle: 'Madder Maroon & Ochre Gold',
-            image: 'images/A5.png',
-            thumb: 'images/A5.png',
-            badge: 'Vintage Maroon'
-          }
-        ]
-      },
-      'A6': {
-        id: 'A6',
-        code: 'DPT-06',
-        title: 'Vermilion Floral Mandala Dupatta',
-        price: '₹7,899',
-        originalPrice: '₹10,299',
-        image: 'images/A6.png',
-        desc: 'Radiant vermilion scarlet body adorned with traditional circular floral mandala medallions and fine resham piping.',
-        colors: [
-          {
-            name: 'Radiant Vermilion Scarlet',
-            displayTitle: 'Radiant Vermilion Scarlet',
-            image: 'images/A6.png',
-            thumb: 'images/A6.png',
-            badge: 'Vermilion Red'
+            name: 'Pine Green',
+            displayTitle: 'Dark Pine Green',
+            image: 'images/dupatta/4/9.png',
+            thumb: 'images/dupatta/4/C9.png',
+            badge: 'Pine Green'
           }
         ]
       }
@@ -906,9 +789,9 @@
       }
 
       // Update WhatsApp Order Button text & link
-      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) priced at ${currentProduct.price}.`;
+      let orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}).`;
       if (index > 0 && color.name !== 'Close-up') {
-        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour priced at ${currentProduct.price}.`;
+        orderMsgText = `Hello DARSHANA, I would like to order the ${currentProduct.title} (Code: ${currentProduct.code}) in ${color.name} colour.`;
       }
       const orderMsg = encodeURIComponent(orderMsgText);
       document.getElementById('modalWhatsAppOrderBtn').href = `https://wa.me/917567839034?text=${orderMsg}`;
@@ -930,8 +813,6 @@
 
       document.getElementById('modalCodeBadge').textContent = 'Code: ' + p.code;
       document.getElementById('modalProductTitle').textContent = p.title;
-      document.getElementById('modalProductPrice').textContent = p.price;
-      document.getElementById('modalProductOriginalPrice').textContent = p.originalPrice;
 
       // Render Available Colours Container
       const colorsContainer = document.getElementById('modalColorsContainer');
@@ -939,18 +820,18 @@
 
       if (p.colors && p.colors.length > 0) {
         if (colorHeader) colorHeader.style.display = 'flex';
-        const colsClass = p.colors.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : (p.colors.length === 3 ? 'grid-cols-3' : (p.colors.length === 2 ? 'grid-cols-2 max-w-[280px]' : 'grid-cols-1 max-w-[150px]'));
-        colorsContainer.className = `grid ${colsClass} gap-2 sm:gap-2.5`;
+        const colsClass = p.colors.length > 4 ? 'grid-cols-4' : (p.colors.length === 3 ? 'grid-cols-3' : (p.colors.length === 2 ? 'grid-cols-2 max-w-[280px]' : 'grid-cols-1 max-w-[150px]'));
+        colorsContainer.className = `grid ${colsClass} gap-1.5 max-h-[145px] sm:max-h-[155px] md:max-h-[165px] overflow-y-auto pr-1.5 overscroll-contain`;
         colorsContainer.innerHTML = p.colors.map((c, i) => `
           <button type="button" onclick="selectModalColor(${i})"
-            class="color-thumb-btn group relative rounded-xl sm:rounded-2xl overflow-hidden border ${i === selectedColorIndex ? 'border-2 border-[#7A1528] ring-2 ring-[#7A1528]/40 shadow-md bg-white scale-[1.03]' : 'border-[#E8A5A5] hover:border-[#7A1528]/60 shadow-xs bg-white/70 hover:bg-white opacity-85 hover:opacity-100'} p-1.5 sm:p-2 text-center transition-all duration-200 cursor-pointer">
-            <div class="relative w-full aspect-square rounded-lg sm:rounded-xl overflow-hidden bg-[#faf4f2] mb-1">
+            class="color-thumb-btn group relative rounded-lg sm:rounded-xl overflow-hidden border ${i === selectedColorIndex ? 'border-2 border-[#7A1528] ring-1.5 ring-[#7A1528]/40 shadow-sm bg-white scale-[1.02]' : 'border-[#E8A5A5] hover:border-[#7A1528]/60 shadow-xs bg-white/70 hover:bg-white opacity-85 hover:opacity-100'} p-1 text-center transition-all duration-200 cursor-pointer">
+            <div class="relative w-full aspect-square rounded-md sm:rounded-lg overflow-hidden bg-[#faf4f2] mb-0.5">
               <img src="${c.thumb || c.image}" alt="${c.name}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-              <div class="check-indicator absolute top-1 right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#7A1528] text-white flex items-center justify-center text-[9px] sm:text-[10px] font-bold shadow-xs ${i === selectedColorIndex ? '' : 'hidden'}">
+              <div class="check-indicator absolute top-0.5 right-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-[#7A1528] text-white flex items-center justify-center text-[8px] sm:text-[9px] font-bold shadow-xs ${i === selectedColorIndex ? '' : 'hidden'}">
                 ✓
               </div>
             </div>
-            <p class="font-sans font-bold text-[10px] sm:text-[11px] text-[#7A1528] leading-tight text-center truncate px-0.5">${c.badge || c.name}</p>
+            <p class="font-sans font-bold text-[9px] sm:text-[10px] text-[#7A1528] leading-tight text-center truncate px-0.5">${c.badge || c.name}</p>
           </button>
         `).join('');
       } else {
@@ -961,16 +842,22 @@
       // Auto-select Close-up option from the start itself
       selectModalColor(selectedColorIndex);
 
+      detailsModal.style.visibility = 'visible';
+      detailsModal.style.pointerEvents = 'auto';
       detailsModal.classList.remove('opacity-0', 'pointer-events-none');
-      detailsModal.classList.add('opacity-100', 'pointer-events-auto');
+      detailsModal.classList.add('opacity-100', 'pointer-events-auto', 'modal-active');
       modalContent.classList.remove('scale-95');
       modalContent.classList.add('scale-100');
       document.body.classList.add('overflow-hidden');
     }
 
     function closeProductDetails() {
+      detailsModal.style.pointerEvents = 'none';
+      detailsModal.classList.remove('opacity-100', 'pointer-events-auto', 'modal-active');
       detailsModal.classList.add('opacity-0', 'pointer-events-none');
-      detailsModal.classList.remove('opacity-100', 'pointer-events-auto');
+      setTimeout(() => {
+        if (!detailsModal.classList.contains('modal-active')) detailsModal.style.visibility = 'hidden';
+      }, 300);
       modalContent.classList.add('scale-95');
       modalContent.classList.remove('scale-100');
       document.body.classList.remove('overflow-hidden');
@@ -986,6 +873,10 @@
       if (e.key === 'Escape') {
         closeProductDetails();
       }
+    });
+
+    window.addEventListener('pageshow', () => {
+      if (typeof closeProductDetails === 'function') closeProductDetails();
     });
   </script>
 
